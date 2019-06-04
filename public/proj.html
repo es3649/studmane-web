@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf8">
+
+<html>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <head>
+        <h1 class="center-text">
+            <code>proj</code>
+        </h1>
+        <p class="center-text"><a href="https://github.com/es3649/proj">
+            Go to project on Github
+            <img class="logo"
+                src="./res/GitHub-Mark.png"
+                alt="Github Logo" 
+                title="http://github.com/es3649/proj" /> 
+            </a>
+            <br> This project is still in progress
+        </p>
+    </head>
+
+    <body>
+        <div class="description">
+            <h2>Description</h2>
+            <code>proj</code> is a command line tool designed to make command line
+            development more efficient. I live my life in the shell. <code>proj</code>
+            is for everyone who, like me, believes that <i>real</i> development tools
+            include only the shell, and maybe a nice editor like VSCode.
+        </div>
+
+        <div>
+            <h2>Commands</h2>
+
+            <div class="command">
+                <h3><code>init</code></h3>
+                <p class="indent">
+                    <code>init</code> initializes a new workspace. Subcommands are provided
+                    to initialize java and c++ projects specifically. New directories are
+                    created which are often used in projects, including folders for source 
+                    code, tools, compiled binaries, external libraries, documentation, and 
+                    so forth. It also creates a path modifier, allowing project tools to be 
+                    used universally, and a language specific Makefile, which relies on the
+                    pre-generated tools in the tools directory to get work done.
+                </p>
+                
+                <p class="indent">
+                    This command also supplies the <code>-g</code> flag, allowing Github integration. 
+                    <code>proj</code> local resources contain a Github OAuth token, allowing it to initialize a
+                    new repository remotely, as well as to locally.
+                    This integration will likely be done using Google's
+                    <a href="https://github.com/google/go-github">go-github</a> library.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3><code>class</code></h3>
+                <p class="indent">
+                    <code>class</code> creates and formats a new blank class file.
+                </p>
+
+                <p class="indent">
+                    In c++ projects, this command creates a pair of files, a '.cpp' and a '.h'.
+                    In java and go projects, package names will be inferred and auto generated.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3><code>mv</code></h3>
+                <p class="indent">
+                    This command moves files and directories while respecting references
+                    to that file/directory in other files. In java and go files, this includes
+                    respect to package names within files.
+                </p>
+
+                <p class="indent">
+                    This move is also done with respect to <code>git</code>, so that files are
+                    'moved' with respect to version control, instead of deleted and re-added. The
+                    real purpose for this is that I think the latter is messy, even though
+                    implementing the former method is a pain.
+                </p>
+            </div>
+
+            <div class="command">
+                <h3>Other</h3>
+                <p class="indent">
+                    This project, as well as its design, is still in progress.
+                    Other commands will be implemented as the need arises. To suggest new 
+                    functionality, please make suggestions at the <a href="https://github.com/es3649/proj/issues">
+                    project issues</a> page, or fork the project and make your own contribution!
+                </p>
+            </div>
+        </div>
+
+        <div class="resources">
+            <h2>Resources</h2>
+
+            <p class="indent">
+                <code>~/.proj_config</code> stores configurations for the <code>proj</code> tool,
+                as well as resources needed for class generation. Later, command line integration
+                may be added to enable config modification at execution time, but as is, configs
+                can only be edited by modifying them directly withing the <code>.proj_config</code>
+                folder.
+            </p>
+            <p class="indent">
+                This <code>.proj_config</code> resource file, contains sub-directories for each
+                suported language. Each language defines a <code>manifest.json</code>, which 
+                declares which directories will be created, and which resource files will be
+                copied upon initialization. The manifest references resource files based on their
+                relative locaiton to the manifest. 
+                <br>Each Language also declares custom class file templates, which are used when
+                executing the <code>class</code> command. They also define a <code>messages.json</code>
+                which defines 
+            </p>
+        </div>
+
+        <div class="credits">
+                <h2>Project Credits</h2>
+                <p class=indent>
+                    Written in Go
+                    <br>Logging with the
+                    <a href="https://github.com/sirupsen/logrus">logrus</a> package by sirupsen
+                    <br>Flags and subcommand management with the
+                    <a href="https://github.com/spf13/cobra">cobra</a> package by spf13
+                    <br>Github integration planned to be done with
+                    <a href="https://github.com/google/go-github">go-github</a> by Google
+                </p>
+            </div>
+
+    </body>
+
+    <footer>
+        <p class="center-text">
+            <b>Links:</b>
+            <a class="indent" href="https://github.com/es3649/proj">
+                Check it out on Github
+                <img class="logo"
+                    src="./res/GitHub-Mark-Light.png"
+                    alt="Github Logo" 
+                    title="http://github.com/es3649/proj" />
+            </a>
+        </p>
+        <p class="center-text">Created By Eric Steadman on May 3, 2019</p>
+    </footer>
+</html>

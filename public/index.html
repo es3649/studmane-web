@@ -2,44 +2,140 @@
 <meta charset="utf8">
 
 <html>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <div class="imgbox">
+        <img class="center-fit"
+            src="./res/P1010572.JPG"
+            alt="panorama of me over iguaçu"
+            title="Photo Credit: Master Sterling Long" />
+    </div>
+
     <head>
-        <title>This is the title</title>
+        <title>Portfolio - Eric Steadman</title>
+
+        <h1>
+            Portfolio - es3649
+        </h1>
     </head>
 
     <body>
-        <h1>Conversation!</h1>
-        <p>"I like to eat apples," he said.</p>
-        <p>"I prefer mangos," she responded.</p>
-        <h2>Conclusion</h2>
-        <p>She has good taste. <s>You should ask her out!</s></p>
+        <script type="text/javascript" src="./script.js"></script>
+        <!-- about -->
+        <div class="heading" >
+            <h2>
+                About Me
+            </h2>
+        </div>
+            <!-- pictue of me! -->
+            <img id="machu-poncho"
+                alt="Me wearing a poncho"
+                align="right"
+                src="./res/small.JPG"
+                title="To be completely honest, this poncho is my favorite thing I got on that trip. It was worth every one of the 30 soles and every one of the 20 dollars. Photo Credit: probably Gentry Carter"/>
 
-        <h3>Computers are useful</h3>
-        <a href="https://xkcd.com/1912">
-            <img alt="xkcd 1912 thermostat"
-                src="https://studmane-web.firebaseapp.com/res/thermostat.png"
-                title="Your problem is so terrible, I worry that, if I help you, I risk drawing the attention of whatever god of technology inflicted it on you." />
-        </a>
-        <p>usually...</p><br>
+        <div class="paragraph">
+            <p>
+                My name is <b>Eric Steadman</b>. I'm 21, and I was raised in Orem, Utah. 
+                I'm a senior in the Mathematics program, minoring in Computer Science, at 
+                <a href="https://byu.edu/">Brigham Young University</a>. I like cooking,
+                photography, and writing poetry. I enjoy proving things,
+                and I like to get in over my head and figure out things which are above my level.
+                I frequently find myself researching things in my free time.
+            </p>
+        </div>
 
-        <h3>My favorite chemicals</h3>
-        <li>H<sub>2</sub>O</li>
-        <li>C<sub>6</sub>H<sub>8</sub>O<sub>7</sub></li>
-        <li>HCl</li>
-        <li>C<sub>12</sub>H<sub>22</sub>O<sub>11</sub></li>
+        <!-- work experience -->
+        <div class="heading" >
+            <h2>
+                Work Experience
+            </h2>
+        </div>
 
-        <br>
+        <div class="list">
+            <ul>
+                <li><b>Teaching Assistant</b>: Jan 2019 - present</li>
+                Helped peers understand topics in discrete mathematics,
+                and aided the professors in grading assignments and exams.
+                
+                <li><b>Research Assistant</b>: Sept 2018 - present</li>
+                Working on research and data analysis projects associated 
+                with stock market cycle prediction in association with NCH Capital.
+                
+                <li><b>Research Intern</b>: Jan - Aug 2018</li>
+                Worked on various projects: training acoustic models, 
+                cleaning audio data, writing formatting grammars, 
+                designing and building an Object-relational Mapping
+                
+                <li><b>Proselytizing Missionary</b>: Sept 2015 - Aug 2017</li>
+                I spent two years in Central Washington State as an official 
+                representative of the Church of Jesus Christ of Latter-day 
+                Saints. I worked full days proselytizing and sharing the 
+                restored gospel of Jesus Christ as taught in the mentioned 
+                sect. While there I learned Spanish and focused mainly on 
+                preaching to the Hispanic population.
+            </ul>
+        </div>
 
-        <iframe width="560" height="315" 
-            alt="rickrolled those seeing folks"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0" frameborder="0" 
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+        <script src="script.js"></script>
+
+        <div class="mischief">
+            <button class="mischief" onclick="doMischief()">Click to spawn a YouTube video!</button>
+        </div>
+
+        <div class="mischief" id="mischiefBox" >
+            <h2>Favorite Song</h2>
+            <iframe width="560" height="315" alt="troll those seeing folks" id="trollFrame"
+                src="https://www.youtube.com/embed/JI5noh4OyXc" frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- project list -->
+        <div class="heading" >
+            <h2>
+                Project Examples
+            </h2>
+        </div>
+
+        <div class="list">
+            <ul>
+                <li><a href="./poetry.html">
+                    Poetry
+                </a></li>
+                <li><a href="./proj.html">
+                    Side project (<code>proj</code>)
+                </a></li>
+                <li><a href="./scripturetool.html">
+                    Side project (<code>scripturetool</code>)
+                </a></li>
+            </ul>
+        </div>
+
+
     </body>
 
-
     <footer>
-        <h2>My Foot</h2>
-        <!-- use the <a> tag for links! -->
-        <p>Check out my <a href="https://github.com/es3649">github</a></p>
+        <p class="center-text">
+            Check me out on:
+            <a href="https://github.com/es3649">
+                Github
+                <img class="logo"
+                    src="./res/GitHub-Mark-Light.png"
+                    alt="Github Logo" 
+                    title="http://github.com/es3649" />
+                </a>
+            <a href="https://www.linkedin.com/in/eric-s-5b923395/">
+                LinkedIn
+                <img class="logo"
+                    src="./res/In-White.png"
+                    alt="LinkedIn Logo" 
+                    title="http://www.linkedin.com/in/eric-s-5b923395/"/>
+                </a>
+        </p>
+        <p class="center-text"><a href="sitemap.html">Site Map</a></p>
+        <p class="center-text">Created by Eric Steadman on May 2, 2019</p>
     </footer>
+
 </html>

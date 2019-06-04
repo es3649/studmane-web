@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<meta charset="utf8">
+
+<html>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <head>
+        <h1 class="center-text">
+            <code>scripturetool</code>
+        </h1>
+        <p class="center-text"><a href="https://github.com/es3649/scripturetool">
+            Go to project on Github
+            <img class="logo"
+                src="./res/GitHub-Mark.png"
+                alt="Github Logo" 
+                title="http://github.com/es3649/scripturetool" /> 
+            </a>
+        </p>
+    </head>
+
+    <body>
+        <div class="description">
+            <h2>Description</h2>
+
+            <p class="indent">Command line tool for accessing Latter-day Saint scripture, 
+                designed for faster lookup.
+                <br>Scripture resource files are stored as g-zipped json and accessed directly by reference.
+                References are displayed in <code>less</code> by default, but the <code>-o</code> flag
+                redirects output to stdout.
+                <br> Flags are also available to display footnotes and headings, or modify formatting.
+            </p>
+            
+        </div>
+
+        <div>
+            <h2>Usage</h2>
+            <code class="block">
+                ./scripturetool [flags] &lt;reference&gt;
+            </code>
+
+            <div class="code-block">
+                <PRE class="block">
+Reference:
+  "Book chap:vs"         or 
+  "Book chap"            (prints whole chapter) or
+  "Book chap-range"      (doesn't accept verse listing)
+Book Name:
+  "1 Corinthians"        (by name)
+  "1-cor"                (abbreviated: see below)
+  "{Matt,Mark,Luke}"     (listed: abbreviated or not)--Not yet implemented
+  "[OT]"                 (by class)
+Chapter Number:
+  "2"                    (number)
+  "3-5"                  (range: don't list verses after)
+  "20,84,100"            (listed)
+  "*"                    (all chapters, same as not listing verse)--Not yet implemented
+Verse Numbers:
+  "2"                    (number)
+  "3-5"                  (range)
+  "77,79"                (listed)
+  Using * as a chapter will indicate all chapters in the book: John *:12 will indicate
+    the 12th verse of every chapter of John (having at least 12 verses)
+  Using * as a verse is equivalent to listing the chapter number alone: John 17:* is
+    equivalent to John 17
+                </PRE>
+            </div>
+        </div>
+
+        <div>
+            <h2>Backend Details</h2>
+
+            <h3>Grammar</h3>
+            <p class="indent">
+                The following grammar defines the structure of a valid
+                scripture reference. 
+            </p>
+            <div class="code-block">
+                <PRE class="block">
+&lt;start&gt;           ::= &lt;reference&gt; &lt;referencelist&gt; ';'?
+&lt;referencelist&gt;   ::= ';' &lt;reference&gt; &lt;refrencelist&gt; | ';' | &lt;lambda&gt;
+&lt;reference&gt;       ::= &lt;book&gt; | &lt;book&gt; (&lt;chapter&gt; &lt;chapterlist&gt; | '*') 
+                      | &lt;book&gt; (&lt;chapter&gt; | '*') ':' (&lt;verse&gt; &lt;verselist&gt; | '*')
+&lt;book&gt;            ::= [::alnum::[]] &lt;string&gt; | '*'
+&lt;string&gt;          ::= []-::alpha::] &lt;string&gt; | &lt;lambda&gt;
+&lt;lambda&gt;          ::= ''
+&lt;integer&gt;         ::= [0-9] &lt;integer&gt; | &lt;lambda&gt;
+&lt;chapter&gt;         ::= &lt;integer&gt; | &lt;integerrange&gt;
+&lt;chapterlist&gt;     ::= ',' &lt;chapter&gt; &lt;chapterlist&gt; | &lt;lambda&gt;
+&lt;integerrange&gt;    ::= &lt;integer&gt; '-' &lt;integer&gt;
+&lt;verse&gt;           ::= &lt;integer&gt; | &lt;integerrange&gt;
+&lt;verselist&gt;       ::= ',' &lt;verse&gt; &lt;verselist&gt; | &lt;lambda&gt;
+                </PRE>
+            </div>
+
+            <h3>Abbreviations</h3>
+            <p class="indent">
+                Abbreviaitons are available so that users don't have to type entire
+                book names, since the point of the tool is to enhance lookup speed.
+            </p>
+
+            <div class="code-block">
+                <PRE class="block">
+OLD TESTAMENT   [ot]    NEW TESTAMENT   [nt]   
+Genesis         gen     Matthew         matt   
+Exodous         ex      Mark            mark   
+Leviticus       lev     Luke            luke   
+Deuteronomy     deut    John            john   
+Numbers         num     Acts            acts   
+Joshua          jos     Romans          rom    
+Judges          judg    1 Corinthians   1-cor  
+Ruth            ruth    2 Corinthians   2-cor  
+1 Samuel        1-sam   Galatians       gal    
+2 Samuel        2-sam   Ephesians       eph    
+1 Kings         1-kin   Philippians     philip 
+2 Kings         2-kin   Colossians      col    
+1 Chronicles    1-chr   1 Thessalonians 1-thes 
+2 Chronicles    2-chr   2 Thessalonians 2-thes 
+Ezra            ezra    1 Timothy       1-tim  
+Nehemiah        neh     2 Timothy       2-tim  
+Esther          esth    Titus           titus  
+Job             job     Philemon        philem 
+Psalms          ps      Hebrews         heb    
+Proverbs        prov    James           jas    
+Ecclesiastes    eccl    1 Peter         1-pet  
+Song of Solomon song    2 Peter         2-pet  
+Isaiah          isa     1 John          1-jn   
+Jeremiah        jer     2 John          2-jn   
+Lamentations    lam     3 John          3-jn   
+Ezekiel         ezek    Jude            jude   
+Daniel          dan     Revelation      rev    
+Hosea           hosea                          
+Joel            joel    BOOK OF MORMON  [bom]  
+Amos            amos    1 Nephi         1-ne   
+Obadiah         obad    2 Nephi         2-ne   
+Jonah           jonah   Jacob           jacob  
+Micah           micah   Enos            enos   
+Nahum           nahum   Jarom           jarom  
+Habakkuk        hab     Omni            omni   
+Zephaniah       zeph    Words of Mormon w-of-m 
+Haggai          hag     Mosiah          mosiah 
+Zechariah       zech    Alma            alma   
+Malachi         mal     Helaman         hel    
+                        3 Nephi         3-ne   
+PEARL OF        [pgp]   4 Nephi         4-ne   
+  GREAT PRICE           Mormon          morm   
+Moses           moses   Ether           ether  
+Abraham         abr     Moroni          moro   
+JS-Matthew      js-m                           
+JS-History      js-h    DOCTRINE AND    [dc]   
+Articles        a-of-f    COVENANTS            
+  of Faith              Sections        dc     
+                </PRE>
+            </div>
+        </div>
+
+        <div class="credits">
+            <h2>Project Credits</h2>
+            <p class=indent>
+                Written in Go
+                <br>Logging with the
+                <a href="https://github.com/sirupsen/logrus">logrus</a> package by sirupsen
+                <br>Flags and subcommand management with the
+                <a href="https://github.com/spf13/cobra">cobra</a> package by spf13
+                <br>Scripture resources scraped from
+                <a href="https://www.ChurchOfJesusChrist.org/scriptures/">ChurchOfJesusChrist.org/scriptures</a>
+            </p>
+        </div>
+
+    </body>
+
+    <footer>
+        <p class="center-text"><b>Links:</b>
+            <a class="indent" href="https://github.com/es3649/scripturetool">
+                Check it out on Github
+                <img class="logo"
+                    src="./res/GitHub-Mark-Light.png"
+                    alt="Github Logo" 
+                    title="http://github.com/es3649/scripturetool" />
+            </a>
+            <br>
+            <a class="indent" href="https://github.com/es3649/scripturetool/releases/tag/v0.2.1">
+                Latest Release
+            </a>
+        </p>
+        <p class="center-text">Created By Eric Steadman on May 2, 2019</p>
+    </footer>
+</html>

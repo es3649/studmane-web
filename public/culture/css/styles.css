@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+    background-color: lavender;
+}
+
+.body-text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center-text {
+    text-align: center;
+}
+
+div.construction {
+    padding: 15px;
+    background-color: yellow;
+    position: static;
+}
+
+p.construction {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+}
