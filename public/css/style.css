@@ -1,11 +1,24 @@
 body {
-    background-color: rgb(235, 235, 253);
+    background-image: url('res/P1010572.JPG');
+    background-position-x: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color: rgb(235, 235, 253); */
+    /* background-blend-mode: multiply; */
+    margin: 0dp;
 }
 
 /* div classes */
 div.imgbox {
     display: grid;
     max-height: 100%;
+}
+
+.content {
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #EBEBFDB0;
 }
 
 div.heading {
@@ -49,6 +62,10 @@ button.mischief {
 /* I don't like the purple links*/
 a {
     color: inherit;
+}
+
+h1, h2, h3, h4, h5, p, li, ul {
+    font-family: 'Signika';
 }
 
 /* code should look like code, right? */
