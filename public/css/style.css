@@ -1,11 +1,21 @@
 body {
+    /* background-color: rgb(235, 235, 253); */
+    /* background-blend-mode: multiply; */
+    margin: 0dp;
+}
+
+#index {
     background-image: url('res/P1010572.JPG');
     background-position-x: center;
     background-size: cover;
     background-attachment: fixed;
-    /* background-color: rgb(235, 235, 253); */
-    /* background-blend-mode: multiply; */
-    margin: 0dp;
+}
+
+#tranquility {
+    background-image: url('res/drew.JPG');
+    background-position-x: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* div classes */
