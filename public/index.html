@@ -2,118 +2,114 @@
 <meta charset="utf8">
 
 <html>
-    <link rel="stylesheet" href="css/style.css">
-    
-
-    <div class="imgbox">
-        <img class="center-fit"
-            src="./res/P1010572.JPG"
-            alt="panorama of me over iguaçu"
-            title="Photo Credit: Master Sterling Long" />
-    </div>
-
     <head>
         <title>Portfolio - Eric Steadman</title>
-
-        <h1>
-            Portfolio - es3649
-        </h1>
+        
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet'>
     </head>
+    
+    <body id="index">
 
-    <body>
-        <script type="text/javascript" src="./script.js"></script>
-        <!-- about -->
-        <div class="heading" >
-            <h2>
-                About Me
-            </h2>
-        </div>
+        <div class="container content">
+            
+            <h1>
+                Portfolio
+            </h1>
+            <!-- about -->
+            <div class="heading" >
+                <h2>
+                    About Me
+                </h2>
+            </div>
             <!-- pictue of me! -->
             <img id="machu-poncho"
-                alt="Me wearing a poncho"
-                align="right"
-                src="./res/small.JPG"
-                title="To be completely honest, this poncho is my favorite thing I got on that trip. It was worth every one of the 30 soles and every one of the 20 dollars. Photo Credit: probably Gentry Carter"/>
-
-        <div class="paragraph">
-            <p>
-                My name is <b>Eric Steadman</b>. I'm 21, and I was raised in Orem, Utah. 
-                I'm a senior in the Mathematics program, minoring in Computer Science, at 
-                <a href="https://byu.edu/">Brigham Young University</a>. I like cooking,
-                photography, and writing poetry. I enjoy proving things,
-                and I like to get in over my head and figure out things which are above my level.
-                I frequently find myself researching things in my free time.
-            </p>
-        </div>
-
-        <!-- work experience -->
-        <div class="heading" >
-            <h2>
-                Work Experience
-            </h2>
-        </div>
-
-        <div class="list">
-            <ul>
-                <li><b>Teaching Assistant</b>: Jan 2019 - present</li>
-                Helped peers understand topics in discrete mathematics,
-                and aided the professors in grading assignments and exams.
-                
-                <li><b>Research Assistant</b>: Sept 2018 - present</li>
-                Working on research and data analysis projects associated 
-                with stock market cycle prediction in association with NCH Capital.
-                
-                <li><b>Research Intern</b>: Jan - Aug 2018</li>
-                Worked on various projects: training acoustic models, 
-                cleaning audio data, writing formatting grammars, 
-                designing and building an Object-relational Mapping
-                
-                <li><b>Proselytizing Missionary</b>: Sept 2015 - Aug 2017</li>
-                I spent two years in Central Washington State as an official 
-                representative of the Church of Jesus Christ of Latter-day 
-                Saints. I worked full days proselytizing and sharing the 
-                restored gospel of Jesus Christ as taught in the mentioned 
-                sect. While there I learned Spanish and focused mainly on 
-                preaching to the Hispanic population.
-            </ul>
-        </div>
-
-        <script src="script.js"></script>
-
-        <div class="mischief">
-            <button class="mischief" onclick="doMischief()">Click to spawn a YouTube video!</button>
-        </div>
-
-        <div class="mischief" id="mischiefBox" >
-            <h2>Favorite Song</h2>
-            <iframe width="560" height="315" alt="troll those seeing folks" id="trollFrame"
+            alt="Me wearing a poncho"
+            align="right"
+            src="./res/small.JPG"
+            title="To be completely honest, this poncho is my favorite thing I got on that trip. It was worth every one of the 30 soles and every one of the 20 dollars. Photo Credit: probably Gentry Carter"/>
+            
+            <div class="paragraph">
+                <p>
+                    My name is <b>Eric Steadman</b>. I'm 21, and I was raised in Orem, Utah. 
+                    I'm a senior in the Mathematics program, minoring in Computer Science, at 
+                    <a href="https://byu.edu/">Brigham Young University</a>. I like cooking,
+                    photography, and writing poetry. I enjoy proving things,
+                    and I like to get in over my head and figure out things which are above my level.
+                    I frequently find myself researching things in my free time.
+                </p>
+            </div>
+            
+            <!-- work experience -->
+            <div class="heading" >
+                <h2>
+                    Work Experience
+                </h2>
+            </div>
+            
+            <div class="list">
+                <ul>
+                    <li><b>Teaching Assistant</b>: Jan 2019 - present</li>
+                    Helped peers understand topics in discrete mathematics,
+                    and aided the professors in grading assignments and exams.
+                    
+                    <li><b>Research Assistant</b>: Sept 2018 - present</li>
+                    Working on research and data analysis projects associated 
+                    with stock market cycle prediction in association with NCH Capital.
+                    
+                    <li><b>Research Intern</b>: Jan - Aug 2018</li>
+                    Worked on various projects: training acoustic models, 
+                    cleaning audio data, writing formatting grammars, 
+                    designing and building an Object-relational Mapping
+                    
+                    <li><b>Proselytizing Missionary</b>: Sept 2015 - Aug 2017</li>
+                    I spent two years in Central Washington State as an official 
+                    representative of the Church of Jesus Christ of Latter-day 
+                    Saints. I worked full days proselytizing and sharing the 
+                    restored gospel of Jesus Christ as taught in the mentioned 
+                    sect. While there I learned Spanish and focused mainly on 
+                    preaching to the Hispanic population.
+                </ul>
+            </div>
+            
+            <script src="script.js"></script>
+            
+            <div class="mischief">
+                <button class="mischief" onclick="doMischief()">Click to spawn a YouTube video!</button>
+            </div>
+            
+            <div class="mischief" id="mischiefBox" >
+                <h2>Favorite Song</h2>
+                <iframe width="560" height="315" alt="troll those seeing folks" id="trollFrame"
                 src="https://www.youtube.com/embed/JI5noh4OyXc" frameborder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen></iframe>
+            </div>
+            
+            <!-- project list -->
+            <div class="heading" >
+                <h2>
+                    Project Examples
+                </h2>
+            </div>
+            
+            <div class="list">
+                <ul>
+                    <li><a href="./poetry.html">
+                        Poetry
+                    </a></li>
+                    <li><a href="./proj.html">
+                        Side project (<code>proj</code>)
+                    </a></li>
+                    <li><a href="./scripturetool.html">
+                        Side project (<code>scripturetool</code>)
+                    </a></li>
+                </ul>
+            </div>
         </div>
 
-        <!-- project list -->
-        <div class="heading" >
-            <h2>
-                Project Examples
-            </h2>
-        </div>
-
-        <div class="list">
-            <ul>
-                <li><a href="./poetry.html">
-                    Poetry
-                </a></li>
-                <li><a href="./proj.html">
-                    Side project (<code>proj</code>)
-                </a></li>
-                <li><a href="./scripturetool.html">
-                    Side project (<code>scripturetool</code>)
-                </a></li>
-            </ul>
-        </div>
-
-
+    <script type="text/javascript" src="./script.js"></script>
     </body>
 
     <footer>
