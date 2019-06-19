@@ -1,35 +1,112 @@
 <!DOCTYPE html>
 <html>
-    <head>
-	<meta charset="utf8"/>
-        <title>Immigration - SPAN 355</title>
-        <link rel="stylesheet" href="css/styles.css"/>
-        <link rel="stylesheet" href="../css/bootstrap.css">
-    </head>
+  <head>
+    <meta charset="utf8"/>
+    <title>Revolution - SPAN 355</title>
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+  </head>
+  
+  <body>
+    <div id="root" :style="{ 'background-image': 'url(' + image + ')' }">
+      <div class="construction">
+        <p class="construction center-text">This page is still under construction</p>
+      </div>
+      
 
-    <body>
-        <div class="construction">
-            <p class="construction center-text">This page is still under construction</p>
+      <div class="container content">
+        <div class="row">
+          <div class="col-12">
+            <p class="body-text">
+              <!-- intro -->
+              &nbsp;&nbsp;&nbsp;&nbsp;"Give me Liberty or give me Death!" 
+              Éstos son las palabras famosas de Patrick Henry antes que la revolución de las colonias británicas, pero ¿qué tal las dos? 
+              Ultimamente, la américa española quedaron con un poco de ambos. 
+              Con su revolución contra la madre patria. Las condiciones en las colonias españoles fueron fundamentalmente diferentes que las en las colonias británicas. 
+              Las colonias norteamericanas ya habían experimentado la negligencia de su madre patria y así aprendido gobernarse, no se integraron con los nativos, y al base de todo, fueron fundados con una ideología separatista. 
+              Las colonias españoles no se habían fundados así, y por eso, realmente no estaban preparados para la independencia.
+              
+            </p>
+            <p>
+              &#9;En la mesa en siguiente, se presentan unas maneras en las que las revoluciones fueron diferentes que las revolución de los EEUU.
+              Haz clic en una tema para ver una elaboración en la significancia de esta diferencia.
+            </p>
+          </div>
         </div>
+        <div class="row justify-content-center">
+          <div class="col-12-auto table">
+            <table>
+              <tr>
+                <th>Obstáculo</th>
+                <th>Qué pasó en los Estados Unidos</th>
+                <th>Qué pasó en Latinoamérica</th>
+              </tr>
+              <tr class="link-row" @click="showIdeology()">
+                <td>Ideología</td>
+                <td>Fundado en separatismo</td>
+                <td>Fundado en abuso y poder</td>
+              </tr>
+              <tr>
+                <td colspan="3" v-if="ideology">
+                  <!-- content here -->
+                  <p>The founding ideologies were different</p>
+                </td>
+              </tr>
+              <tr class="link-row" @click="showMotherland()">
+                <td>Relación con la madre patria</td>
+                <td>Negligencia</td>
+                <td>Abuso</td>
+              </tr>
+              <tr>
+                <td colspan="3" v-if="motherland">
+                  <!-- content here -->
+                  <p>neglegence allowed for autonomy</p>
+                </td>
+              </tr>
+              <tr class="link-row" @click="showNatives()">
+                <td>Relación con nativos</td>
+                <td>Los mataron</td>
+                <td>Se integraron con ellos</td>
+              </tr>
+              <tr>
+                <td colspan="3" v-if="natives">
+                  <!-- content here -->
+                  <p>The integration caused a lack of unity</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
         
+      <div class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="body-text">
-                            "Give me Liberty or give me Death!" 
-                            Éstos son las palabras famosas de Patrick Henry antes que la revolución de las colonias británicas, pero yo pregunto: ¿Por qué no las dos? 
-                            Ultimamente, la américa española recibió los dos. 
-                            Con su revolución contra la madre patria. Las condiciones en las colonias españoles fueron fundamentalmente diferentes que las en las colonias británicas. 
-                            Las colonias norteamericanas ya habían experimentado la negligencia de su madre patria, [dealt with the natives differently], y al base de todo, fueron fundados con una ideología separatista. 
-                            Las colonias españoles no se habían fundados así, y por eso, realmente no estaban preparados para la independencia.
-                    </p>
-                </div>
+          <div class="row align-items-center">
+            <div class="col-6">
+              <p class="right-text">Research project for Spanish 355, BYU
+                <br><a href="./writeup.pdf">Project writeup</a>
+              </p>
             </div>
+            <div class="col-6">
+              <p>Created by Eric Steadman on June 10, 2019
+                <br>Check it out on 
+                  <a href="https://github.com/es3649/studmane-web/tree/master/public/culture"
+                  title="http://github.com/es3649/public/culture">
+                  GitHub <img class="logo"
+                  src="/res/GitHub-Mark-Light.png"
+                  alt="Github Logo" />
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
 
-    <footer>
-        
-    </footer>
-
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+  </body>
+  
+  
+  
+  </html>
