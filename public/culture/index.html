@@ -12,24 +12,22 @@
       <div class="construction">
         <p class="construction center-text">This page is still under construction</p>
       </div>
-      
 
       <div class="container content">
         <div class="row">
           <div class="col-12">
             <p class="body-text">
               <!-- intro -->
-              &nbsp;&nbsp;&nbsp;&nbsp;"Give me Liberty or give me Death!" 
-              Éstos son las palabras famosas de Patrick Henry antes que la revolución de las colonias británicas, pero ¿qué tal las dos? 
-              Ultimamente, la américa española quedaron con un poco de ambos. 
-              Con su revolución contra la madre patria. Las condiciones en las colonias españoles fueron fundamentalmente diferentes que las en las colonias británicas. 
-              Las colonias norteamericanas ya habían experimentado la negligencia de su madre patria y así aprendido gobernarse, no se integraron con los nativos, y al base de todo, fueron fundados con una ideología separatista. 
-              Las colonias españoles no se habían fundados así, y por eso, realmente no estaban preparados para la independencia.
-              
+&nbsp;&nbsp;&nbsp;&nbsp;"Give me Liberty or give me Death!" 
+Éstos son las palabras famosas de Patrick Henry antes que la revolución de las colonias británicas, pero ¿qué tal las dos? 
+Últimamente, la américa española quedaron con un poco de ambos después de su revolución contra la madre patria.
+Las condiciones en las colonias españoles fueron fundamentalmente diferentes que las en las colonias británicas. 
+Las colonias norteamericanas ya habían experimentado la negligencia de su madre patria y así aprendido gobernarse, no se integraron con los nativos, y al base de todo, fueron fundados con una ideología separatista. 
+Las colonias españoles no se habían fundados así, y por eso, realmente no estaban preparados para la independencia.
             </p>
             <p>
-              &#9;En la mesa en siguiente, se presentan unas maneras en las que las revoluciones fueron diferentes que las revolución de los EEUU.
-              Haz clic en una tema para ver una elaboración en la significancia de esta diferencia.
+&nbsp;&nbsp;&nbsp;&nbsp;En la mesa en siguiente, se presentan unas maneras en las que las revoluciones fueron diferentes que las revolución de los EEUU.
+Haz clic en una tema para ver una elaboración en la significancia de esta diferencia.
             </p>
           </div>
         </div>
@@ -41,6 +39,7 @@
                 <th>Qué pasó en los Estados Unidos</th>
                 <th>Qué pasó en Latinoamérica</th>
               </tr>
+
               <tr class="link-row" @click="showIdeology()">
                 <td>Ideología</td>
                 <td>Fundado en separatismo</td>
@@ -49,9 +48,22 @@
               <tr>
                 <td colspan="3" v-if="ideology">
                   <!-- content here -->
-                  <p>The founding ideologies were different</p>
+                  <p>
+&nbsp;&nbsp;&nbsp;&nbsp;Las colonias británicas fueron fundados por puritanos, quienes salieron de inglaterra con el deseo de alejarse de la iglesia de inglaterra y la persecución que experimentaban en su madre paria.
+Desde los primeros estadounidenses, querían apartarse de inglaterra.
+                  </p>
+                  <p>  
+&nbsp;&nbsp;&nbsp;&nbsp;Comparémoslo con la fundación de las colonias españolas, las cuales fueron fundados para la gloria de españa.
+España robaban continuamente las riquezas del nuevo mundo para pagar sus deudas y financiar sus guerras.
+Colón mismo quería predicarles el evangelio, integrando a los indígenas más con el resto de europa.
+                  </p>
+                  <p>
+&nbsp;&nbsp;&nbsp;&nbsp;Esto sirvió las colonias británicas porque cuando ya querían rebelarse, ya habían heredado so ideología separatista.
+Latinoamérica no tuvo esta ventaja.
+                  </p>
                 </td>
               </tr>
+
               <tr class="link-row" @click="showMotherland()">
                 <td>Relación con la madre patria</td>
                 <td>Negligencia</td>
@@ -63,9 +75,10 @@
                   <p>neglegence allowed for autonomy</p>
                 </td>
               </tr>
+
               <tr class="link-row" @click="showNatives()">
                 <td>Relación con nativos</td>
-                <td>Los mataron</td>
+                <td>Los mataron y corrieron</td>
                 <td>Se integraron con ellos</td>
               </tr>
               <tr>
@@ -74,6 +87,31 @@
                   <p>The integration caused a lack of unity</p>
                 </td>
               </tr>
+
+              <tr class="link-row" @click="showCulturalRevolution()">
+                <td>Cultura</td>
+                <td>Ya tenían identidad</td>
+                <td>Sin identidad general</td>
+              </tr>
+              <tr>
+                <td colspan="3" v-if="culturalRevolution">
+                  <p>
+&nbsp;&nbsp;&nbsp;&nbsp;Carlos Fuentes demuestra en la revolución mexicana, que una revolución consiste realmente en dos revoluciones: una revolución política, y una revolución cultural.
+Si miras la historia de los estados unidos, poco cambió culturalmente después de conseguir su independencia y establecer su nuevo gobierno constitucional.
+Esto es porque aquella revolución (cultural) ya quedaba terminado cuando empezó la revolución política.
+Ellos ya tenían una identidad nacional, ésto es lo que les llevó a rebelarse y luchar por su independencia.
+Eran una gente distinta, y por eso querían un país distinto.
+                  </p>
+                  <p>
+&nbsp;&nbsp;&nbsp;&nbsp;Latino américa no tenía su identidad.
+Fuentes cita que todo latinoamericano es tricultural.
+Unos son negros o indios, unos criados por nanas indios o negros, todos bajo la influencia de europa.
+Bolívar mismo fue de esto mismo clase de quién-sabe-qué-raza.
+Así que cuando por fin consiguieron su libertad, no pudieron unirse y crear una nación, porque no tenían ninguna identidad.
+                  </p>
+                </td>
+              </tr>
+                
             </table>
           </div>
         </div>

@@ -7,6 +7,7 @@ var app = new Vue({
         ideology: false,
         motherland: false,
         natives: false,
+        culturalRevolution: false,
     },
     
     computed: {
@@ -25,5 +26,6 @@ var app = new Vue({
         showIdeology() { this.ideology = !this.ideology; },
         showMotherland() { this.motherland = !this.motherland; },
         showNatives() { this.natives = !this.natives; },
+        showCulturalRevolution() { this.culturalRevolution = !this.culturalRevolution; },
     },
 })
