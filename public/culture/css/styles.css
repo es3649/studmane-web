@@ -59,7 +59,7 @@ td, th {
 }
   
 tr:nth-child(odd) {
-    background-color: #DDDDDDD0;
+    background-color: #DDDDDD90;
 }
 
 .footer {
