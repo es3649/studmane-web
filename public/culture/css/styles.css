@@ -14,6 +14,7 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 15px;
     position: relative;
     min-height: 100vh;
     padding-bottom: 6rem;
@@ -60,6 +61,10 @@ td, th {
   
 tr:nth-child(odd) {
     background-color: #DDDDDD90;
+}
+
+div.see-also {
+    font-size: 11pt;
 }
 
 .footer {
