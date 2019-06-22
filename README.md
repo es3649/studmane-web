@@ -1,6 +1,4 @@
 # studmane-web
-This is The repository for my personal website.
+Version control for content at studmane.com
 
 It deploys to the studmane-web project in Firebase.
-
-**TODO**: add a favicon.ico
