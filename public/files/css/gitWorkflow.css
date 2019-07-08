@@ -1,0 +1,69 @@
+body {
+    background-color: black;
+    color: azure;
+}
+
+.section {
+    padding: 1% 5%;
+}
+
+.subsection {
+    padding-left: 1%;
+}
+
+code {
+    /* background-color: black; */
+    color: coral;
+}
+
+a {
+    text-decoration-line: underline;
+    color: inherit;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 17%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: darkslategrey;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 3%;
+    padding-top: 1%;
+}
+
+.sidenav h1 {
+    margin-bottom: 0px;
+}
+
+.sidenav h2 {
+    margin-top: 0px;
+}
+
+.sidenav .sub {
+    padding-left: 15%;
+}
+
+.sidenav a {
+    text-decoration-line: none;
+    padding: .5%;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: azure;
+    color: black;
+}
+
+.line {
+    height: 3px;
+    background: lightgrey;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.content {
+    margin-left: 23%;
+}

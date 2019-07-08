@@ -1,0 +1,4 @@
+# files not to commit to github
+# maybe this is sill, since I"m making them available on the web, but whatever
+lib.tar.gz
+resume.pdf

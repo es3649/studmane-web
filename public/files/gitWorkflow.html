@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<meta charset="utf8">
+
+<html>
+  <head>
+    <title>Git Workflow</title>
+    <link rel="stylesheet" href="css/gitWorkflow.css">
+  </head>
+
+  <body>
+    <div class="sidenav">
+      <h1 id="contents"><code>git</code> Workflow</h1>
+      <h2>A basic toolkit</h2>
+      <p>Highlights are bolded</p>
+      
+      <div class="line"></div>
+
+      <a href="#cloning">Cloning a repository</a>
+      <strong><a href="#commit">Commit</a></strong>
+        <strong><a class="sub" href="#status">Status</a></strong>
+        <a class="sub" href="#stash">Stash</a>
+        <a class="sub" href="#log">Log</a>
+        <strong><a class="sub" href="#tracking">Tracking (add, remove)</a></strong>
+      <a href="#accessing-remote">Accesing Remote</a>
+        <strong><a class="sub" href="#push">Push</a></strong>
+        <strong><a class="sub" href="#pull">Pull</a></strong>
+        <a class="sub" href="#remote">Remote</a>
+      <a href="#branches">Branches</a>
+        <a class="sub" href="#creating-branches">Creating branches</a>
+        <a class="sub" href="#moving-between-branches">Moving between branches</a>
+        <a class="sub" href="#merging-branches">Merging branches</a>
+        <a class="sub" href="#rebasing">Rebase</a>
+        <a class="sub" href="#deleting-branches">Deleting branches</a>
+      <a href="#reverting">Reverting</a>
+      <a href="#workflow">Workflow</a>
+      
+    </div>
+  
+    <div class="content">
+    
+      <div class="section">
+      
+        <h1 id="cloning">Cloning</h1>
+        <p>To <i>clone</i> a repository is to copy all the files to your local workspace. It also copies the associated <code>git</code> workspace.</p>
+        <p>To clone a repository, run <code>git clone [repo-url]</code></p>
+        <p>The <code>repo-url</code> can be found at the repository's home page. Click the green button in the upper right of the home page which says &quot;Clone or Download.&quot; It will generate a little pop-up box with the <code>repo-url</code></p>
+        <p>When you clone a repository via command line, it will create a new folder with the files and the git workspace inside.</p>
+      </div>
+    
+      <div class="section">
+      
+        <h1 id="commit">Commit</h1>
+        <p>To <i>commit</i> is pretty simple, it 'saves' your changes. Just run: <code>git commit -am [COMMIT_MESSAGE]</code></p>
+        <p>The <code>[COMMIT MESSAGE]</code> should include a short but specific summary of the changes which are being saved.</p>
+        <p>If needed, you can run <code>git commit --amend -am [COMMIT_MESSAGE]</code> to change or update the commit message of the last commit. Also, omitting the <code>m</code> in <code>-am</code> will cause git to open an editor in which you can give a longer explanation of the changes.</p>
+        
+        <div class="subsection">
+        
+          <h2 id="status">Status</h2>
+          <p>Displays what files have been changed since the last commit.</p>
+          <p>It also shows a list of untracked files. These files will NOT be saved in the commit, and will not be modified or even monitored by <code>git</code>.</p>
+          <p>Manage these with the commands in the <a href="#tracking">Tracking</a> section.</p>
+        </div>
+          
+        <div class="subsection">
+        
+          <h2 id="stash">Stash</h2>
+          <p>Occasionally you may try to perform an operation but you will be unable to, or you might risk losing changes. You could commit those changes, or you could <i>stash</i> them with <code>git stash</code>. The changes will be stashed away in a secret place, and the branch will revert to the previous commit.</p>
+          <p>Those stashed changes can be reapplied using <code>git stash apply</code> once you are ready to put them back, and they can even be applied to other branches, though with risk of conflict.</p>
+        </div>
+        
+        <div class="subsection">
+        
+          <h2 id="log">Log</h2>
+          <p>Opens a commit history similar to the following:</p>
+          <pre><code>
+01 commit 9e34fe47b705b1ae10f372343aba0dd70005730b (HEAD -&gt; es3649/NHC)
+02 Author: es3649 &lt;es3649@gmail.com&gt;
+03 Date:   Fri Feb 8 14:21:11 2019 -0700
+04 
+05     added documentation for train_test_split.py
+06 
+07 commit 334acbd0ed88de8eaf8faf067e8a4297425d603e (origin/es3649/NHC)
+08 Merge: 6b80fbd f0ea129
+09 Author: es3649 &lt;es3649@gmail.com&gt;
+10 Date:   Thu Jan 31 09:59:29 2019 -0700
+11 
+12     Merge branch &#39;master&#39; of https://github.com/es3649/NHC into es3649/NHC
+13
+14 commit 6b80fbd3df05646796448777004c615df99b57f9
+15 Author: es3649 &lt;es3649@gmail.com&gt;
+16 Date:   Tue Jan 29 18:07:16 2019 -0700
+17 
+18     added the time separated data
+19 
+20 commit f0ea129ee8fd3db7d251c3543211a8b7ff6d562e (origin/master, origin/HEAD, master)
+21 Merge: 4e6d7f5 524efbe
+22 Author: es3649 &lt;es3649@gmail.com&gt;
+23 Date:   Mon Jan 28 14:35:22 2019 -0700
+24
+25     Merge branch &#39;es3649/fix-the-tree-logs&#39;</code></pre>
+          <p>So, these line numbers don't actually appear, I just put theme there for easier reference. This log you see may be longer or shorter. This one shows the last 4 commits.</p>
+          <p>On lines 1, 7, 14, 20 we have commit hashes. These big long strings are unique identifiers for commits.</p>
+          <p>On 1, 7, 20 at the end of the line (in parentheses) we have branch names. <code>origin/master</code> is currently behind the by current branch <code>es3649/NHC</code>. But the remote version of my <code>NHC</code> branch is behind the remote version, <code>origin/es3649/NHC</code>.</p>
+          <p>On lines 5, 12, 18, 25 I have commit messages for the commits which have been made.</p>
+        </div>
+          
+        <div class="subsection">
+          <h2 id="tracking">Tracking</h2>
+          <p><code>git</code> tracks changes in files for you, but it doesn't follow everything by default. You have to tell it what it should/can pay attention to. This is done with the <a href="#add"><code>add</code></a> and <a href="#remove"><code>rm</code></a> commands.</p>
+          <p><code>git add [FILENAME]</code> tells git to begin tracking the file at <code>[FILENAME]</code>.</p>
+          <p><code>git rm [FILENAME]</code> tells git to delete the file at <code>[FILENAME]</code> and to stop tracking it. Wait, delete it, like from the computer? Yep! it will be GONE! to get it back (if you've already committed the file once) you can run <code>git checkout HEAD [FILENAME]</code> to bring him back. By default, git won't let you delete files which have been changed or added since the last commit. Add the <code>-f</code> flag to delete them anyway.</p>
+          <p><code>git rm --cache [FILENAME]</code> is what you probably wanted. it WILL NOT delete the file at <code>[FILENAME]</code>, but will just stop tracking it.</p>
+          <p><code>git diff</code> shows the changed which have been made since the last commit.</p>
+
+          <div class="subsection">
+            <h2 id="gitignore">.gitignore</h3>
+            <p>Now, maybe you have some files that you want around, but you don't want git to see them (files with secret access keys, compiled binaries, or giant data files), but you <em>also</em> don't want those obnoxious &quot;untracked file&quot; dialogs whenever you commit and check the status.</p>
+            <p>Git has a secret file called <code>.gitignore</code> which just sits at the root of your git repository and tells git what to ignore. Git will never complain about untracked files which are listed in your .gitignore. It will also not save or track changes in them.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+
+        <h1 id="accessing-remote">Accessing Remote</h1>
+        <p>One of the beauties of git is that it stores all your changes in the great, unknowable, and ever-persistent cloud. You will, however, need to access these branches and update them so that everyone can see what you've been working on.</p>
+
+        <div class="subsection">
+          <h2 id="push">Push</h2>
+          <p><code>git push origin [BRANCHNAME]</code> will upload new commits on that branch to the cloud.</p>
+        </div>
+
+        <div class="subsection">
+          <h2 id="pull">Pull</h2>
+          <p><code>git pull origin [BRANCHNAME]</code> will download new commits from the specified branch into the <em>current</em> branch.</p>
+          <h2 id="remote">Remote</h2>
+          <p><code>git remote</code> offers several subcommands to allow you to change remote settings.</p>
+          <p><code>git remote show origin</code> — Shows where remote changes are pushed to/pulled from</p>
+          <p><code>git remote add origin [URL]</code> — If no remote already exists, then git will begin to push and pull chaged to/from <code>[URL]</code>.</p>
+          <p><code>git remote remove origin</code> — Deletes removes the remote (removes locally, remote will still exist at its remote location), the local repository will stop following the remote, and can be set to follow another remote with <code>add</code></p>
+        </div>
+      </div>
+
+      <div class="section">
+
+        <h1 id="branches">Branches</h1>
+        <p>A <i>branch</i> represents an alternate worksite. The master branch contains the main project and should be updated only occasionally, or as new developments are made. Each user makes changes to a repository by working on their own branch, and when the changes are ready to be published, these personal branches are merged into master.</p>
+
+        <div class="subsection">
+          <h2 id="creating-branches">Creating Branches</h2>
+          <p>To create a new branch, you will run:</p>
+          <p><code>git checkout -b [username]/[branchName]</code></p>
+          <p>Where <code>[username]</code> is your github.com username and <code>[branchName]</code> describes the purpose of the branch.</p>
+          <p>This specific format is not strictly required, but it's good practice for the branch name to be prefaced by <code>[username]/</code>. This just allows collaborators to know that it is your branch.</p>
+          <p>Now, this branch only exists locally. To uopload it to the cloud, run:</p>
+          <p><code>git push origin [nameOfBranchToUpload]</code></p>
+          <p>You can also pull changes from remote (the cloud) into your local branches. Do this by running <code>git pull origin [branchName]</code> from within the branch to update, where <code>[branchName]</code> is the name of the branch from which you want to bring in changes. This may cause merge conflicts.</p>
+        </div>
+
+        <div class="subsection">
+          <h2 id="moving-between-branches">Moving Between Branches</h2>
+          <p>Multiple branches can be maintained on your local device at the same time. To view the current branches on your computer, run:</p>
+          <p><code>git branch</code></p>
+          <p>This will display all local branches. The one you are on will have a * next to it, and will likely be highlighted green.</p>
+          <p><code>git branch -a</code> will list <em>all</em> branches, including remote (only in the cloud) branches. Most of these don't matter, but sometimes deleted branches will hang around remotely after being deleted (see <a href="#deleting-branches">Deleting branches</a>).</p>
+          <p>To switch from one branch to another, use:</p>
+          <p><code>git checkout [branchName]</code> (<em>without</em> the <code>-b</code> we used earlier)</p>
+          <p>This will switch onto the branch called <code>[branchName]</code>.</p>
+        </div>
+
+        <div class="subsection">
+          <h2 id="merging-branches">Merging Branches</h2>
+          <p>This can be done from command line, but is often easier to manage using the interface at github.com.</p>
+          <p>Before merging your branch into master, run <code>git pull origin master</code> locally and within the branch you want to merge. This may cause merge conflicts, but this is the best time and place to deal with them. You will then use <code>git push origin [branch]</code> to upload the local version to remote (the cloud).</p>
+          <p>Now, go to the repository's location at github.com. If you just pushed, there will likely be a notification at the top of the page saying that your branch was just changed, giving you the option to open a pull request.</p>
+          <p>If this message doesn't appear, then on the top tab bar (under the name of the repository) you will find a &quot;Pull requests&quot; tab (probably the 3rd tab). From there click the green &quot;New Pull Request&quot; button on the top right. The top bar will ask you which branches to merge. &quot;Base&quot; (the first drop down box) should probably be master, or the branch which is receiving the new changes. &quot;Compare&quot; (the second drop down box) is the branch which contains the new changes which will be copied over to Base. Once you have selected the branches, click the &quot;Create Pull Request&quot; button.</p>
+          <p>Add a message detailing the new changes you have made, then click &quot;Create Pull Request.&quot; The pull request (PR) is now opened. At the top of the left column, there will be a box labelled &quot;Reviewers.&quot; Click the gear at the top right of the box to select some reviewers. These reviewers can look over the changes, make comments, approve them, or request changes to them. Some repositories may require other users to approve changes before merging a PR is allowed.</p>
+          <p>Last, the user who started the PR, merges and confirms the pull request. The user who submitted the PR should deal with any associated merge conflicts.</p>
+          <p>If desired, the branch can be deleted after the merge has been completed.</p>
+        </div>
+
+        <div class="subsection">
+          <h2 id="rebasing">Rebasing</h2>
+          <p>This is another way to update your branch to the current state of another branch without creating a merge commit.</p>
+          <p>Run <code>git rebase [BRANCH]</code>.</p>
+          <p>All commits on <code>[BRANCH]</code> will be added to the current branch if there is no interference with current commits.</p>
+        </div>
+
+        <div class="subsection">
+          <h2 id="resolving-merge-conflicts">Resolving Merge Conflicts</h2>
+          <p>If two branches have conflicting changes and you try to merge or rebase, get lets you deal with that. It does this by messing with your files like so:</p>
+          <pre><code>
+This is a code file.
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+It has a nasty problem
+=======
+It has a merge conflict
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; incoming-branch-name</code>
+          </pre>
+          <p>The HEAD, or current branch will be first with the code which was added there. After the equals signs, the incoming change will be displayed. This is the change which was made in the other branch which is being merged in/rebased.</p>
+          <p>To resolve the conflict, remove the code which you <em>don't want</em> to be in the resulting file. Then delete the the lines with angle brackets (&gt;&gt;, &lt;&lt;) and the equal signs. Once all is done, use <code>git add [PROBLEM_FILE]</code></p>
+          <p>To resolve conflicting files (a file was added in one branch and removed in another), just do <code>git add [PROBLEM_FILE]</code> if you want to keep it, and remove it if you want it removed.</p>
+          <p>At any time during a merge, use <a href="#status"><code>git status</code></a> to see where the problems are.</p>
+          <p>Use <code>git rebase --abort</code> or <code>git merge -- abort</code> to quit the rebase/merge respectively.</p>
+          <p>Use <code>git rebase --continue</code> or <code>git merge --continue</code> once all changes have been resolved to finish up the rebase/merge. Then commit and push your changes.</p>
+        </div>
+
+        <div class="subsection">
+          <h2 id="deleting-branches">Deleting Branches</h2>
+          <p>Branches can be deleted after a pull request (PR) is merged on the github.com website, but there is a difference between deleting a branch locally and remotely.</p>
+          <p>Branches can be deleted locally using the following command:</p>
+          <p><code>git branch -D [branchName]</code></p>
+          <p>To delete a branch remotely, use one of the following:</p>
+          <ol style="list-style-type: decimal">
+            <li><code>git push origin --delete</code></li>
+            <li><code>git push origin --delete [branchName]</code></li>
+          </ol>
+          <p>Use (1.) from within the local version of the branch you want to delete if it still exists locally. If it doesn't, you can use (2.) from within a different branch substituting <code>[branchName]</code> with the name of the branch you want to delete.</p>
+          <p>Occasionally, branches which have been remotely deleted will still appear as remote branches when using <code>git branch -a</code>. When this happens, use</p>
+          <p><code>git remote prune origin</code></p>
+          <p>to make them go away.</p>
+        </div>
+      </div>
+
+      <div class="section">
+
+        <h1 id="reverting">Reverting</h1>
+        <p>Before reverting, it is important to understand <a href="#log"><code>git log</code></a>.</p>
+        <p><strong>Warning:</strong> Turns out that undos can't be undone.</p>
+        <p><code>git reset --hard [COMMIT_ID]</code> resets the working directory to the state at <code>[COMMIT_ID]</code>. All current changed are discarded along with all changes since <code>[COMMIT_ID]</code>. The <code>[COMMIT_ID]</code> can be taken from the output of <code>git log</code>. Use <code>HEAD</code> as the commit id to remove all changes since the last commit.</p>
+        <p>You can also reset a particular file or set of files to a particular commit with <code>git reset [COMMIT_ID] -- &lt;filenames&gt;</code>.</p>
+      </div>  
+      
+      <div class="section">
+        <h1 id="workflow">Workflow</h1>
+        <p>Typical <code>git</code> workflow will go as follows:
+          <ol>
+            <li>Create or clone a repository if you haven't already</li>
+            <li>Create and switch to a new branch, dedicated exclusively to the feature you are implementing</li>
+            <ul>
+              <li><code>git checkout -b [USERNAME]/[BRANCHNAME]</code></li>
+            </ul>
+            <li>Write code (Can't help you with that)</li>
+            <li>Commit changes and push</li>
+            <ul>
+              <li><code>git commit -am [COMMIT MESSAGE]</code></li>
+              <li><code>git push origin [BRANCH]</code></li>
+            </ul>
+            <li>Create a pull request remotely, and optionally request reviewers. This is all done on the remote server: GitHub, GitLab, BitBucket, etc.</li>
+            <li>Update master locally to get new changes</li>
+            <ul>
+              <li><code>git checkout master</code></li>
+              <li><code>git pull origin master</code></li>
+            </ul>
+            <li>Merge remote changes into the new branch</li>
+            <ul>
+              <li><code>git checkout [BRANCH]</code></li>
+              <li><code>git rebase master</code></li>
+            </ul>
+            <li>Fix merge conflicts as needed. The one submitting the branch should typically resolve the conflicts when merging their branch into master</li>
+            <li>Force push the new changes. Regular push will fail, as the commits will appear different after the rebase</li>
+            <ul>
+              <li><code>git push --force orign [BRANCH]</code></li>
+            </ul>
+            <li>The merge is finished remotely.</li>
+            <li>Pull the new changes locally</li>
+            <ul>
+              <li><code>git checkout master</code></li>
+              <li><code>git pull origin master</code></li>
+            </ul>
+            <li>Branches are typically deleted after the merge is finished. Delete the branch locally</li>
+            <ul>
+              <li><code>git branch -D [BRANCH]</code></li>
+            </ul>
+            <li>Optionally delete the branch remotely</li>
+            <ul>
+              <li><code>git remote prune origin</code></li>
+            </ul>
+          </ol>
+        </p>
+      </div>
+      
+    </div>
+
+    <div class="footer">
+
+    </div>
+  </body>
+</html>
