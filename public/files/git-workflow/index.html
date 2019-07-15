@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>Git Workflow</title>
-    <link rel="stylesheet" href="css/gitWorkflow.css">
+    <link rel="stylesheet" href="git-workflow.css">
   </head>
 
   <body>
@@ -13,8 +13,9 @@
       <h2>A basic toolkit</h2>
       <p>Highlights are bolded</p>
       
-      <div class="line"></div>
+      <hr />
 
+      <a href="#overview">Overview</a>
       <a href="#cloning">Cloning a repository</a>
       <strong><a href="#commit">Commit</a></strong>
         <strong><a class="sub" href="#status">Status</a></strong>
@@ -37,6 +38,42 @@
     </div>
   
     <div class="content">
+
+      <div class="section">
+        <h1 id="overview">Overview</h1>
+
+        <p>
+          <code>git</code> may very well be one of the most useful and most arcane tools in computer science.
+          It provides a command line interface for version control: 
+          managing your edit history, saving, and backing up your files as you work.
+          Technically speaking, <code>git</code> itself is different and independent from GitHub, GitLab or similar services.
+          <code>git</code> refers to the command line tool, whereas GitHub, GitLab and others are remote servers where
+          you can back up your workspace.
+        </p>
+
+        <p>
+          <code>git</code> works by tracking differences in files between <i>commits</i> or &quot;saves&quot;.
+          These commit histories can be split off in to different branches, then each branch can be modified independently.
+          Branches can then be merged back together as desired to reflect changes made on both branches.
+          All these commits and branches can be easily managed and shared with others using GitHub, GitLab, etc.
+          As one may suppose, this can result in conflict, when different changed have been made to the same line of code
+          on both branches, but these can be resolved quite easily with most IDEs.
+        </p>
+
+        <p>
+          Due to the difficulty of using <code>git</code>, and/or aversion to the command line, a number of GUIs have been produced
+          (such as Source Tree and Git Kraken) to make using <code>git</code> easier, though I have heard that none of these tools
+          provide quite the same amount of power as using <code>git</code> directly from the command line.
+        </p>
+
+        <p>
+          The following is a guide to using <code>git</code> from the command line, and at the end there is a step by step
+          guide in how to best use <code>git</code> in collaberation with others to avoid undesired changes, to minimize conflicts,
+          and to generally make everyone's life easer.
+        </p>
+      </div>
+
+      <hr />
     
       <div class="section">
       
@@ -46,6 +83,8 @@
         <p>The <code>repo-url</code> can be found at the repository's home page. Click the green button in the upper right of the home page which says &quot;Clone or Download.&quot; It will generate a little pop-up box with the <code>repo-url</code></p>
         <p>When you clone a repository via command line, it will create a new folder with the files and the git workspace inside.</p>
       </div>
+
+      <hr />
     
       <div class="section">
       
@@ -107,10 +146,11 @@
           
         <div class="subsection">
           <h2 id="tracking">Tracking</h2>
-          <p><code>git</code> tracks changes in files for you, but it doesn't follow everything by default. You have to tell it what it should/can pay attention to. This is done with the <a href="#add"><code>add</code></a> and <a href="#remove"><code>rm</code></a> commands.</p>
+          <p><code>git</code> tracks changes in files for you, but it doesn't follow everything by default. You have to tell it what it should/can pay attention to. This is done with the <code>add</code> and <code>rm</code> commands.</p>
           <p><code>git add [FILENAME]</code> tells git to begin tracking the file at <code>[FILENAME]</code>.</p>
           <p><code>git rm [FILENAME]</code> tells git to delete the file at <code>[FILENAME]</code> and to stop tracking it. Wait, delete it, like from the computer? Yep! it will be GONE! to get it back (if you've already committed the file once) you can run <code>git checkout HEAD [FILENAME]</code> to bring him back. By default, git won't let you delete files which have been changed or added since the last commit. Add the <code>-f</code> flag to delete them anyway.</p>
-          <p><code>git rm --cache [FILENAME]</code> is what you probably wanted. it WILL NOT delete the file at <code>[FILENAME]</code>, but will just stop tracking it.</p>
+          <p><code>git rm --cached [FILENAME]</code> is what you probably wanted. it WILL NOT delete the file at <code>[FILENAME]</code>, but will just stop tracking it.</p>
+          <p><code>git mv [FILENAME] [DESTINATION]</code> tells git to move a the file at <code>[FILENAME]</code> to <code>[DESTINATION]</code>, but to keep tracking it at the new location</p>
           <p><code>git diff</code> shows the changed which have been made since the last commit.</p>
 
           <div class="subsection">
@@ -120,6 +160,8 @@
           </div>
         </div>
       </div>
+
+      <hr />
 
       <div class="section">
 
@@ -141,6 +183,8 @@
           <p><code>git remote remove origin</code> — Deletes removes the remote (removes locally, remote will still exist at its remote location), the local repository will stop following the remote, and can be set to follow another remote with <code>add</code></p>
         </div>
       </div>
+
+      <hr />
 
       <div class="section">
 
@@ -223,6 +267,8 @@ It has a merge conflict
         </div>
       </div>
 
+      <hr />
+
       <div class="section">
 
         <h1 id="reverting">Reverting</h1>
@@ -231,6 +277,8 @@ It has a merge conflict
         <p><code>git reset --hard [COMMIT_ID]</code> resets the working directory to the state at <code>[COMMIT_ID]</code>. All current changed are discarded along with all changes since <code>[COMMIT_ID]</code>. The <code>[COMMIT_ID]</code> can be taken from the output of <code>git log</code>. Use <code>HEAD</code> as the commit id to remove all changes since the last commit.</p>
         <p>You can also reset a particular file or set of files to a particular commit with <code>git reset [COMMIT_ID] -- &lt;filenames&gt;</code>.</p>
       </div>  
+
+      <hr />
       
       <div class="section">
         <h1 id="workflow">Workflow</h1>

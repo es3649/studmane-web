@@ -7,6 +7,11 @@ body {
     padding: 1% 5%;
 }
 
+.content hr {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
 .subsection {
     padding-left: 1%;
 }
@@ -14,6 +19,7 @@ body {
 code {
     /* background-color: black; */
     color: coral;
+    font-size: 1.1em;
 }
 
 a {
