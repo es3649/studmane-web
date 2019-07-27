@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    background-image: url('res/NYC.JPG');
+    background-position-x: center;
+    background-position-y: -60px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title { 
+    margin-top: 1%;
+    text-align: center;
+}
+
+.disclaimer {
+    font-size: .8em;
+    text-align: center;
+}
+
+.container{
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #EBEBFDB0;
+}
+
+.dir {
+    font-weight: bold;
+}
+
+a {
+    text-decoration-line: underline;
+    color: inherit;
+}
+
+a:hover {
+    color: #210DB5;
+}
+
+p, li, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Signika';
+}

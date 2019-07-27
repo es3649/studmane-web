@@ -8,6 +8,9 @@ FILESDIR = '/home/es3649/workspace/studmane-web/public'
 
 IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules']
 
+FOLDER_CLASS = "dir"
+FILE_CLASS = "file"
+
 def makeTag(tagType, classes=[], innerHtml="", attributes=dict()):
     """
     makes an html tag with the given stuff
@@ -72,7 +75,11 @@ def globDown(path):
             # print('  isdir')
             temp_res = globDown(f)
             if temp_res:
-                result += f'<li>{f}/</li>\n'
+                # make the <li> tag, but remove the parent directory names and slash from the folder name
+                trimmed = f
+                if bool(path):
+                    trimmed = f[len(path)+1:]
+                result += f'<li class="{FOLDER_CLASS}">{trimmed}/</li>\n'
                 result += temp_res
                 worked += 1
             continue
@@ -91,7 +98,7 @@ def globDown(path):
             if not ignore:
                 # print('  is not IGNORE file')
                 # print the html for this file
-                result += f'<li><a href="{f}">{P.basename(f)}</a></li>\n'
+                result += f'<li class="{FILE_CLASS}"><a href="{f}">{P.basename(f)}</a></li>\n'
                 worked += 1
         
     if worked == 0:
@@ -107,14 +114,28 @@ def main():
     print('<html>')
     print('  <head>')
     print('    <meta charset="utf8">')
-    print('    <title>studamne.com - Site Map</title>')
-    print('    <link rel="stylesheet" href="css/sitemap.css"/>')
+    print('    <title>studmane.com - Site Map</title>')
+    print('    <link rel="stylesheet" href="css/sitemap.css">')
+    print('    <link rel="stylesheet" href="css/bootstrap.css">')
+    print('    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">')
     print('  </head>')
     print('  <body>')
-    print('    <h1 class="title">Site Map</h1>')
+    print('    <div class="container">')
+    print('      <div class="row justify-content-center">')
+    print('        <div class="col-12-auto">')
+    print('          <h1 class="title">Site Map</h1>')
+    print('          <p class="disclaimer">(Generated autoamtically from working directory)</p>')
+    print('        </div>')
+    print('      </div>')
+    print()
+    print('      <div class="row justify-content-center">')
+    print('        <div class="col-12-auto">')
 
     print(globDown(''))
 
+    print('        </div>')
+    print('      </div>')
+    print('    </div>')
     print('  </body>')
     print('</html>')
 
