@@ -6,8 +6,9 @@ import os
 
 FILESDIR = '/home/es3649/workspace/studmane-web/public'
 
-IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules']
+IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules', 'blag/dist']
 
+# these variables define the css classes which correspond to these types of files
 FOLDER_CLASS = "dir"
 FILE_CLASS = "file"
 

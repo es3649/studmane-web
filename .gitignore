@@ -1,3 +1,10 @@
+#
+# .gitignore files also located at:
+#   ./public/files/.gitignore
+#   ./blag/.gitignore
+#   ./down/culture/.gitignore
+#
+
 # Logs
 logs
 *.log
@@ -65,3 +72,8 @@ node_modules/
 .env
 
 .firebaserc
+
+# compiled blag
+public/blag
+public/res/page_images
+public/css/blag.css
