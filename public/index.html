@@ -1,180 +1,244 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf8">
-        <title>Portfolio - Eric Steadman</title>
-        
-        <link rel="stylesheet" href="css/bootstrap.css"/>
-        <link rel="stylesheet" href="css/styles.css">
-        <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet'>
-    </head>
+  <head>
+    <meta charset="utf8">
+    <title>Portfolio - Eric Steadman</title>
     
-    <body id="index">
-
-        <div class="container content">
-            
-            <h1>
-                Portfolio
-            </h1>
-            <!-- about -->
-            <div class="heading" >
-                <h2>
-                    About Me
-                </h2>
-            </div>
-            <!-- pictue of me! -->
-            <img id="machu-poncho"
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet'>
+  </head>
+  
+  <body id="index">
+    
+    <div id="root" class="container content">
+      <nav><!--TODO center the nav-->
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="true">About</a>
+          <a class="nav-item nav-link" id="nav-projects-tab" data-toggle="tab" href="#nav-projects" role="tab" aria-controls="nav-projects" aria-selected="false">Projects</a>
+          <a class="nav-item nav-link" id="nav-experience-tab" data-toggle="tab" href="#nav-experience" role="tab" aria-controls="nav-experience" aria-selected="false">Experience</a>
+        </div>
+      </nav>
+  
+      <div class="tab-content" id="nav-tabContent">
+        <div class="container tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <img id="machu-poncho-home"
             alt="Me wearing a poncho"
-            align="right"
             src="./res/small.JPG"
-            title="To be completely honest, this poncho is my favorite thing I got on that trip. It was worth every one of the 30 soles and every one of the 20 dollars. Photo Credit: probably Gentry Carter"/>
-            
-            <div class="paragraph">
+            title="Photo Credit: probably Gentry Carter"/>
+              
+          Background photo credit: Sterling Long
+        </div>
+
+        <div class="container tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+
+          <div class="row">
+            <div class="col-5">
+
+              <img id="machu-poncho"
+              alt="Me wearing a poncho"
+              src="./res/small.JPG"
+              title="Photo Credit: probably Gentry Carter"/>
+              <!--To be completely honest, this poncho is my favorite thing I got on that trip. It was worth every one of the 30 soles and every one of the 20 dollars. -->
+            </div>
+
+            <div class="col-7">
+    
+              <div class="paragraph">
                 <p>
-                    My name is <b>Eric Steadman</b>. I'm 21, and I was raised in Orem, Utah. 
-                    I'm a senior in the Mathematics program, minoring in Computer Science, at 
-                    <a href="https://byu.edu/">Brigham Young University</a>. I like cooking,
-                    photography, writing poetry. I enjoy proving things,
-                    and I like to get in over my head and figure out things which are above my level.
-                    I frequently find myself researching things in my free time. I also feel an innate
-                    desire to be a cultured individual, so I've dedicated myself to traveling, reading,
-                    and learning languages. I speak Spanish fluently, my Portuguese is on its way, and 
-                    I just started studying Chinese.
+                  My name is <b>Eric Steadman</b>. I'm 21, and I was raised in Orem, Utah. 
+                  I'm a senior in the Mathematics program, minoring in Computer Science, at 
+                  Brigham Young University. I like cooking,
+                  photography, writing poetry. I enjoy proving things,
+                  and I like to get in over my head and figure out things which are above my level.
+                  I frequently find myself researching things in my free time. I also feel an innate
+                  desire to be a cultured individual, so I've dedicated myself to traveling, reading,
+                  and learning languages. I speak Spanish fluently, my Portuguese is on its way, and 
+                  I just started studying Chinese.
                 </p>
+              </div>
             </div>
-            
-            <!-- work experience -->
-            <div class="heading" >
-                <h2>
-                    Work Experience
-                </h2>
-            </div>
-            
-            <div class="list">
-                <ul>
-                    <li><b>Teaching Assistant</b>: Jan 2019 - June 2019</li>
-                    Helped peers understand topics in discrete mathematics,
-                    and aided the professors in grading assignments and exams.
-                    I plan to resume TA work in the fall
-                    
-                    <li><b>Research Assistant</b>: Sept 2018 - present</li>
-                    Working on research projects associated with stock market 
-                    cycle prediction in association with NCH Capital. Project 
-                    supervised by Dr. Michael Dorff
-                    Also work concurrently on projects related to human robot 
-                    interaction and intent expression. Project supervised by 
-                    Dr. Michael Goodrich
+          </div>
 
-                    
-                    
-                    <li><b>Research Intern</b>: Jan - Aug 2018</li>
-                    Worked on various projects: training acoustic models, 
-                    cleaning audio data, writing formatting grammars, 
-                    designing and building an Object-relational Mapping
-                    
-                    <li><b>Proselytizing Missionary</b>: Sept 2015 - Aug 2017</li>
-                    I spent two years in Central Washington State as an official 
-                    representative of the Church of Jesus Christ of Latter-day 
-                    Saints. I worked full days proselytizing and sharing the 
-                    restored gospel of Jesus Christ as taught in the mentioned 
-                    sect. While there I learned Spanish and focused mainly on 
-                    preaching to the Hispanic population.
-                </ul>
-            </div>
-            
-            <!-- Skills -->
-            <div class="heading" >
-                <h2>
+                <div class="heading" >
+                  <h2>
                     Skills
-                </h2>
-            </div>
-
-            <div class="list">
-                <ul>
+                  </h2>
+                </div>
+                
+                <div class="list">
+                  <ul>
                     <li>Problem Solving</li>
                     <li>
-                        Programming experience in: Go, Bash, Python, C++, C#, Java, Javascript, html and css, Vuejs
+                      Programming experience in: Go, Bash, Python, C++, C#, Java, Javascript, html and css, Vuejs
                     </li>
                     <li>Proficiency in <code>git</code></li>
                     <li>Android Development</li>
-                    <li>Quick learner (skilled googler)</li>
+                    <li>Quick learner</li>
                     <li>Fluent Spanish, patchy Portuguese</li>
-                </ul>
-            </div>
-            
-            <!-- project list -->
-            <div class="heading" >
-                <h2>
-                    Project Examples
-                </h2>
-            </div>
-            
-            <div class="list">
-                <ul>
-                    <li><a href="./scripturetool.html">
-                        <code>scripturetool</code>
-                    </a></li>
-                    <!--<li><a href="./proj.html">
-                        Side project (<code>proj</code>)
-                    </a></li>-->
-                    <li><a href="https://github.com/es3649/ExecSec">
-                        ExecSec (app)
-                    </a></li>
-                    <li><a href="https://giuthub.com/es3649/studmane-web">
-                        studmane.com source code
-                    </a></li>
-                    <li><a href="./poetry/index.html">
-                        Poetry
-                    </a></li>
-                    <li><a href="./blag">
-                        Studmane Blag (coming soon)
-                    </a></li>
-                </ul>
-            </div>
+                  </ul>
+                </div>
 
-            <div class="heading">
-                <h2>
+                <div class="heading">
+                  <h2>
                     My Public Files
-                </h2>
-            </div>
-
-            <div class="list">
-                <ul>
+                  </h2>
+                </div>
+              
+                <div class="list">
+                  <ul>
                     <li><a href="files/resume.pdf">Resume</a></li>
                     <li><a href="files/git-workflow/">Git overview</a></li>
                     <li><a href="files/bash-intro/">Bash intro</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            <div class="container tab-pane fade" id="nav-projects" role="tabpanel" aria-labelledby="nav-projects-tab">
+
+              <div class="heading" >
+                <h2>
+                  Project Examples
+                </h2>
+              </div>
+              <!-- TODO expand on these, give them each some space -->
+            
+              <div class="list">
+                <ul>
+                  <li><a href="./scripturetool.html">
+                    <code>scripturetool</code>
+                  </a></li>
+                  <li><a href="./proj.html">
+                    Side project (<code>proj</code>)
+                  </a></li>
+                  <li><a href="https://github.com/es3649/ExecSec">
+                    ExecSec (app)
+                  </a></li>
+                  <li><a href="https://giuthub.com/es3649/studmane-web">
+                    studmane.com source code
+                  </a></li>
+                  <li><a href="./poetry/index.html">
+                    Poetry
+                  </a></li>
+                  <li><a href="./blag">
+                    Studmane Blag (coming soon)
+                  </a></li>
                 </ul>
+              </div>
+
             </div>
+            <div class="container tab-pane fade" id="nav-experience" role="tabpanel" aria-labelledby="nav-experience-tab">
+                
+              <div class="row heading">
+                <h2>
+                  Work Experience
+                </h2>
+              </div>
 
-        </div>
+              <div class="row list">
+                <ul>
+                  <li><p class="floatleft"><b>Software Developer</b>&nbsp;<i class="light">Aug 2019 - present</i></p><p class="floatright"><i>LZTek</i></p></li>
+                  <div style="clear: both;">
+                    Constructed large scale apps and graphical reports within the Quickbase database service to provide real time logistical data for internal use and client convenience
+                  </div>  
 
-    <script type="text/javascript" src="./script.js"></script>
-    </body>
+                  <li><p class="floatleft"><b>Research Intern</b>&nbsp;<i class="light">Jan - Aug 2018</i></p><p class="floatright"><i>Cobalt Speech and Language</i></p></li>
+                  <div style="clear: both;">
+                    Cleaned transcribed audio data with Python scripts to prepare it for use in Acoustic model training<br>
+                    Implemented an object relational mapping to store company data for easier storage and management                      
+                  </div>
+                    
+                  <li><p class="floatleft"><b>Teaching Assistant</b>&nbsp;<i class="light">Jan 2019 - June 2019</i></p><p class="floatright"><i>Brigham Young University</i></p></li>
+                  <div style="clear: both;">
+                    Instructed students in principles of discrete mathematics to help them understand mathematical design concepts for their projects<br>
+                    Graded assignments and exams to help remove the load of grading from the professor so he could focus on teaching and research<br>
+                    Designed and debugged C++ projects to help students finish projects on time
+                  </div>
+                    
+                  <li><p class="floatleft"><b>Research Assistant</b>&nbsp;<i class="light">Sept 2018 - Sept 2019</i></p><p class="floatright"><i>Brigham Young University</i></p></li>
+                  <div style="clear: both;">
+                    Researched stock market cycles in an attempt to predict stock growth and decline for NCH Capital - Project supervised by Dr. Michael Dorff<br>
+                    Loaded a MySQL database with stock market data to manage data better for research<br>
+                    Designed a user interface in Unity for human robot interaction and intent expression for pathfinding - Project supervised by Dr. Michael Goodrich<br>
+                    Created an algorithm to choose the optimal path given a list of path weight vectors and an intent vector
+                  </div>
+                    
+                  <li><p class="floatleft"><b>Proselytizing Missionary</b>&nbsp;<i class="light">Sept 2015 - Aug 2017</i></p><p class="floatright"><i>Church of Jesus Christ of Latter-day Saints</i></p></li>
+                  <div style="clear: both;">
+                    Served two years in Central Washington to preach the restored gospel of Jesus Christ<br>
+                    Helped friends and proselytes make and keep commitments to come closer to Christ and learn of him<br>
+                    Trained and supervised other missionaries in bi-weekly meetings to help them work more effectively<br>
+                    Studied Spanish to focus preaching to the Hispanic population
+                  </div>
+                  
+                </ul>
+              </div>
+              
+              <div class="heading row" >
+                <h2>
+                  Coursework
+                </h2>
+              </div>
+              
+              <div class="row">
+              </div>
+              <p class="floatleft"><b>Mathematics (BS) Computational emphasis</b>&nbsp;<i class="light">Graduation (estimated) Apr 2020 - 3.99 GPA</i></p><p class="floatright"><i>Brigham Young University</i></p>
+              <p class="nomargin" style="clear: both;">Courses in:</p>
+              <div class="row">
+                <div class="col-12 col-md-4">
+                    <li>Data Structures</li>
+                    <li>Algorithm design and analysis</li>
+                    <li>Discrete mathematics</li>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <li>Graph theory</li>
+                    <li>Linear and abstract algebra</li>
+                    <li>Logic and mathematical analysis</li>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <li>Natural Language Processing</li>
+                    <li>Server-client structure</li>
+                    <li>Web programming and REST APIs</li>
+                  </div>
 
-    <footer>
-        <p class="center-text">
-            Check me out on:
-            <a href="https://github.com/es3649">
-                Github
-                <img class="logo"
-                    src="./res/GitHub-Mark-Light.png"
-                    alt="Github Logo" 
-                    title="http://github.com/es3649" />
-                </a>
-            <a href="https://www.linkedin.com/in/eric-s-5b923395/">
-                LinkedIn
-                <img class="logo"
-                    src="./res/In-White.png"
-                    alt="LinkedIn Logo" 
-                    title="http://www.linkedin.com/in/eric-s-5b923395/"/>
-                </a>
-        </p>
-        <p class="center-text"><a href="sitemap.html">Site Map</a></p>
-        <p class="center-text">
-            Created by Eric Steadman on July 8, 2019; updated August 26, 2019
-            <br>Contact me: es3649@gmail.com
-        </p>
-    </footer>
+              </div>
+            </div>
+          </div>
+    
+    </div>
+  
+    <div class="footer">
+      <p class="center-text">
+        Check me out on:
+        <a href="https://github.com/es3649">
+          Github
+          <img class="logo"
+          src="./res/GitHub-Mark-Light.png"
+          alt="Github Logo" 
+          title="http://github.com/es3649" />
+        </a>
+        <a href="https://www.linkedin.com/in/eric-s-5b923395/">
+          LinkedIn
+          <img class="logo"
+          src="./res/In-White.png"
+          alt="LinkedIn Logo" 
+          title="http://www.linkedin.com/in/eric-s-5b923395/"/>
+        </a>
+      </p>
+      <p class="center-text"><a href="sitemap.html">Site Map</a></p>
+      <p class="center-text">
+        Created by Eric Steadman on July 8, 2019; updated October 18, 2019
+        <br>Contact me: studmane@lztek.io
+      </p>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="./script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
 
 </html>

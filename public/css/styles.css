@@ -9,7 +9,26 @@ body {
     background-position-x: center;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 10rem;
 }
+
+/* footer properties */
+
+footer, .footer {
+    padding-top: .125in;
+    padding-bottom: .125in;
+    color: #F0F0F8;
+    background-color: #444458;
+    
+    height: 10rem;
+    /* padding: 1rem; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}    
 
 #tranquility {
     background-image: url('res/drew.JPG');
@@ -33,10 +52,12 @@ div.imgbox {
 
 div.heading {
     align-self: center;
+    margin-top: 15px;
 }
 
 div.paragraph {
     margin: .25in;
+    font-size: 13pt;
 }
 
 div.code-block {
@@ -55,6 +76,25 @@ div.code-block {
     text-align: center;
 }
 
+p.floatright {
+    padding-right: 20px;
+    text-align: right;
+    float: right;
+}
+
+p.floatleft {
+    text-align: left;
+    float: left;
+}
+
+p.nomargin, p.floatleft, p.floatright {
+    margin-bottom: 0px;
+}
+
+.light {
+    color: #666676;
+}
+
 .indent {
     margin-left: .25in;
 }
@@ -63,11 +103,6 @@ div.code-block {
     max-height: 1em;
 }
 
-button.mischief {
-    padding: .125in;
-    background-color: #444458;
-    color: #F0F0F8
-}
 
 /* I don't like the purple links*/
 a {
@@ -95,22 +130,14 @@ h1 code {
     color: #F0F0F8;
 }
 
-/* footer properties */
-
-footer {
-    padding-top: .125in;
-    padding-bottom: .125in;
-    color: #F0F0F8;
-    background-color: #444458;
-    
-}
 
 /* IDs */
 #machu-poncho {
-    max-width: 1.5in;
+    max-width: 100%;
     margin: 20px;
 }
 
-#mischiefBox {
-    display: none;
+#machu-poncho-home {
+    max-width: 50%;
+    margin: 20px;
 }
