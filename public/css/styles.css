@@ -4,7 +4,7 @@ body {
     margin: 0dp;
 }
 
-#index {
+#index, .root {
     background-image: url('res/P1010572.JPG');
     background-position-x: center;
     background-size: cover;
@@ -87,12 +87,20 @@ p.floatleft {
     float: left;
 }
 
-p.nomargin, p.floatleft, p.floatright {
+p.nomargin-bottom, p.floatleft, p.floatright {
     margin-bottom: 0px;
+}
+
+p.nomargin {
+    margin: 0px;
 }
 
 .light {
     color: #666676;
+}
+
+.uline {
+    text-decoration-line: underline;
 }
 
 .indent {
@@ -103,19 +111,24 @@ p.nomargin, p.floatleft, p.floatright {
     max-height: 1em;
 }
 
+.project-image {
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* I don't like the purple links*/
 a {
     color: inherit;
 }
 
-h1, h2, h3, h4, h5, p, li, ul {
+h1, h2, h3, h4, h5, p, li, ul, nav {
     font-family: 'Signika';
 }
 
 /* code should look like code, right? */
 code {
-    color: #D36025
+    color: rgb(0, 0, 0)
 }
 
 code.block {
@@ -130,14 +143,30 @@ h1 code {
     color: #F0F0F8;
 }
 
+.pt48 {
+    font-size: 48pt;
+}
+
+.pt72 {
+    font-size: 72pt;
+}
 
 /* IDs */
-#machu-poncho {
-    max-width: 100%;
-    margin: 20px;
+#santiago-me {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #machu-poncho-home {
-    max-width: 50%;
-    margin: 20px;
+    max-width: 94%;
+    margin: 3%;
+}
+
+#welcome {
+    margin: 4%;
+}
+
+#welcome h1 {
+    font-size: 72pt;
 }
