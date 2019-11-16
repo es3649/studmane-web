@@ -1,180 +1,363 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf8">
-        <title>Portfolio - Eric Steadman</title>
-        
-        <link rel="stylesheet" href="css/bootstrap.css"/>
-        <link rel="stylesheet" href="css/styles.css">
-        <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet'>
-    </head>
+  <head>
+    <meta charset="utf8">
+    <title>Portfolio - Eric Steadman</title>
     
-    <body id="index">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet'>
+  </head>
+  
+  <body id="index">
 
-        <div class="container content">
-            
-            <h1>
-                Portfolio
-            </h1>
-            <!-- about -->
-            <div class="heading" >
-                <h2>
-                    About Me
-                </h2>
+    <div id="root" class="container content">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="true">About</a>
+          <a class="nav-item nav-link" id="nav-projects-tab" data-toggle="tab" href="#nav-projects" role="tab" aria-controls="nav-projects" aria-selected="false">Projects</a>
+          <a class="nav-item nav-link" id="nav-experience-tab" data-toggle="tab" href="#nav-experience" role="tab" aria-controls="nav-experience" aria-selected="false">Experience</a>
+        </div>
+      </nav>
+      
+      <div class="tab-content" id="nav-tabContent">
+        <div class="container tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="row">
+            <div class="col-12 col-lg-6 order-lg-1 order-2">
+
+              <img id="machu-poncho-home"
+              alt="Me wearing a poncho"
+              src="./res/small.JPG"
+              title="Photo Credit: probably Gentry Carter"/>
             </div>
-            <!-- pictue of me! -->
-            <img id="machu-poncho"
-            alt="Me wearing a poncho"
-            align="right"
-            src="./res/small.JPG"
-            title="To be completely honest, this poncho is my favorite thing I got on that trip. It was worth every one of the 30 soles and every one of the 20 dollars. Photo Credit: probably Gentry Carter"/>
+
+            <div class="col-12 col-lg-6 order-lg-2 order-1">
+              <div id="welcome">
+                <p class="pt72">Hi, <span class="d-none d-lg-inline"><br></span><span class="pt48">I'm Eric</span></p>
+                <p class="d-none d-lg-inline">Nice to meet you! Click a tab to find out a little more about me, or jump straight to <a href="#" title="coming soon!">my blog</a>.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!--use this for rexlexive structure 
+            https://stackoverflow.com/questions/18057270/column-order-manipulation-using-col-lg-push-and-col-lg-pull-in-twitter-bootstrap
+          -->
+          <div class="row">
+            <div class="col-12 d-block d-lg-none col-lg-6 order-lg-2">
+              <p>Nice to meet you! Click a tab to find out a little more about me, or jump straight to <a href="/blag">my blog</a>.
+              </p>
+            </div>
+          </div>
+          <p class="light"><i>Background photo credit: Sterling Long</i></p>
+        </div>
+        
+        <div class="container tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+          
+          <div class="row">
+            <div class="col-xl-4 col-12">
+              
+              <img id="santiago-me"
+              alt="Me wearing a poncho"
+              src="./res/santiago-me.JPG"
+              title="Photo Credit: probably Gentry Carter"/>
+              
+            </div>
             
-            <div class="paragraph">
+            <div class="col-xl-8 col-12">
+              
+              <div class="paragraph">
                 <p>
-                    My name is <b>Eric Steadman</b>. I'm 21, and I was raised in Orem, Utah. 
-                    I'm a senior in the Mathematics program, minoring in Computer Science, at 
-                    <a href="https://byu.edu/">Brigham Young University</a>. I like cooking,
-                    photography, writing poetry. I enjoy proving things,
-                    and I like to get in over my head and figure out things which are above my level.
-                    I frequently find myself researching things in my free time. I also feel an innate
-                    desire to be a cultured individual, so I've dedicated myself to traveling, reading,
-                    and learning languages. I speak Spanish fluently, my Portuguese is on its way, and 
-                    I just started studying Chinese.
+                  Hi, I'm Eric Steadman. I have a great many interests, and I wish I had more than 
+                  a lifetime to study everything, but most of all I love God, mathematics, and travel.
+                  I'm constantly gaining experience in programming, but I prefer to think of myself
+                  as a computer scientist. I often find myself pushing the boundaries of what I know, 
+                  trying to improve myself and my abilities.
+                  <br>Somewhere inside me there is an innate drive to culture myself, so in addition to my
+                  mathematical studies, I've dedicated time to traveling, reading, and learning languages.
+                  I speak Spanish and Portuguese and I'm currently learning Chinese. I've read a number
+                  of classics, both ancient and modern. My most important priorities are to my God and my
+                  family, but my number three goal in life is to see the world. I want to
+                  learn the languages of the places I go, meet the people, and experience their culture 
+                  and cuisine.
                 </p>
+              </div>
             </div>
-            
-            <!-- work experience -->
-            <div class="heading" >
+          </div>
+          
+          <div class="row">
+            <div class="col-12 col-md-8">
+              <div class="heading" >
                 <h2>
-                    Work Experience
+                  Skills
                 </h2>
+              </div>
             </div>
-            
-            <div class="list">
-                <ul>
-                    <li><b>Teaching Assistant</b>: Jan 2019 - June 2019</li>
-                    Helped peers understand topics in discrete mathematics,
-                    and aided the professors in grading assignments and exams.
-                    I plan to resume TA work in the fall
-                    
-                    <li><b>Research Assistant</b>: Sept 2018 - present</li>
-                    Working on research projects associated with stock market 
-                    cycle prediction in association with NCH Capital. Project 
-                    supervised by Dr. Michael Dorff
-                    Also work concurrently on projects related to human robot 
-                    interaction and intent expression. Project supervised by 
-                    Dr. Michael Goodrich
 
-                    
-                    
-                    <li><b>Research Intern</b>: Jan - Aug 2018</li>
-                    Worked on various projects: training acoustic models, 
-                    cleaning audio data, writing formatting grammars, 
-                    designing and building an Object-relational Mapping
-                    
-                    <li><b>Proselytizing Missionary</b>: Sept 2015 - Aug 2017</li>
-                    I spent two years in Central Washington State as an official 
-                    representative of the Church of Jesus Christ of Latter-day 
-                    Saints. I worked full days proselytizing and sharing the 
-                    restored gospel of Jesus Christ as taught in the mentioned 
-                    sect. While there I learned Spanish and focused mainly on 
-                    preaching to the Hispanic population.
-                </ul>
+            <div class="d-none d-md-block col-4">
+                <div class="heading" >
+                    <h2>
+                      Public Files
+                    </h2>
+                  </div>
             </div>
+          </div>
+          
+          <div class="row">
             
-            <!-- Skills -->
-            <div class="heading" >
+            <div class="col-12 col-md-4 list">
+              <li>Programming in:</li><ul>
+              <li>C++ (3 years)</li>
+              <li>Bash (2 years)</li>
+              <li>Python (2 years)</li>
+              <li>Go (1 year)</li>
+              <li>Java (1 year)</li>
+              <li>C# (&lt;1 year)</li>
+              <li>HTML, CSS, js (&lt;1 year)</li></ul>
+            </div>
+            <div class="col-12 col-md-4 list">
+              <li>Problem Solving</li>
+              <li>SPAs with Vuejs</li>
+              <li>Proficiency in <code>git</code></li>
+              <li>Android development</li>
+              <li>Full stack development</li>
+              <li>Quick and willing learner</li>
+              <li>Fluent Spanish, patchy Portuguese</li>
+              <li>Mathematical proof</li>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="heading d-inline d-md-none">
                 <h2>
-                    Skills
+                  My Public Files
                 </h2>
-            </div>
+              </div>
 
-            <div class="list">
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>
-                        Programming experience in: Go, Bash, Python, C++, C#, Java, Javascript, html and css, Vuejs
-                    </li>
-                    <li>Proficiency in <code>git</code></li>
-                    <li>Android Development</li>
-                    <li>Quick learner (skilled googler)</li>
-                    <li>Fluent Spanish, patchy Portuguese</li>
-                </ul>
+              <div class="list">
+                <li><a href="files/gitignore/resume.pdf">Resume</a></li>
+                <li><a href="files/git-workflow/">Git overview</a></li>
+                <li><a href="files/bash-intro/">Bash intro</a></li>
+              </div>
             </div>
-            
-            <!-- project list -->
-            <div class="heading" >
-                <h2>
-                    Project Examples
-                </h2>
-            </div>
-            
-            <div class="list">
-                <ul>
-                    <li><a href="./scripturetool.html">
-                        <code>scripturetool</code>
-                    </a></li>
-                    <!--<li><a href="./proj.html">
-                        Side project (<code>proj</code>)
-                    </a></li>-->
-                    <li><a href="https://github.com/es3649/ExecSec">
-                        ExecSec (app)
-                    </a></li>
-                    <li><a href="https://giuthub.com/es3649/studmane-web">
-                        studmane.com source code
-                    </a></li>
-                    <li><a href="./poetry/index.html">
-                        Poetry
-                    </a></li>
-                    <li><a href="./blag">
-                        Studmane Blag (coming soon)
-                    </a></li>
-                </ul>
-            </div>
-
-            <div class="heading">
-                <h2>
-                    My Public Files
-                </h2>
-            </div>
-
-            <div class="list">
-                <ul>
-                    <li><a href="files/resume.pdf">Resume</a></li>
-                    <li><a href="files/git-workflow/">Git overview</a></li>
-                    <li><a href="files/bash-intro/">Bash intro</a></li>
-                </ul>
-            </div>
-
+          </div>
+        
         </div>
 
-    <script type="text/javascript" src="./script.js"></script>
-    </body>
+        <div class="container tab-pane fade" id="nav-projects" role="tabpanel" aria-labelledby="nav-projects-tab">
+        
+          <div class="row">
+            <div class="heading" >
+              <h2>
+                Project
+              </h2>
+            </div>
+          </div>
+          <!-- TODO expand on these, give them each some space -->
+          <!-- each title will be in a col-6, then each picture in a col-3 and description in a col-3
+          then, at lg or md breakpoint, the pics and description collapse, then at md, the columns collapse -->
+          
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4>ExecSec</h4>
+              <!-- <img class="project-image"
+                src="/res/ExecSecPreview.png"
+                alt="ExecSec app preview"/> -->
+              <p>
+                ExecSec is an Android client app with a Java NLP server.
+                It's still in progress, but should be done by mid-december.
+              </p>
 
-    <footer>
-        <p class="center-text">
-            Check me out on:
-            <a href="https://github.com/es3649">
-                Github
-                <img class="logo"
-                    src="./res/GitHub-Mark-Light.png"
-                    alt="Github Logo" 
-                    title="http://github.com/es3649" />
-                </a>
-            <a href="https://www.linkedin.com/in/eric-s-5b923395/">
-                LinkedIn
-                <img class="logo"
-                    src="./res/In-White.png"
-                    alt="LinkedIn Logo" 
-                    title="http://www.linkedin.com/in/eric-s-5b923395/"/>
-                </a>
-        </p>
-        <p class="center-text"><a href="sitemap.html">Site Map</a></p>
-        <p class="center-text">
-            Created by Eric Steadman on July 8, 2019; updated August 26, 2019
-            <br>Contact me: es3649@gmail.com
-        </p>
-    </footer>
+              <p>
+                ExecSec manages incoming text messages and generated responses. 
+                It uses Stanford's coreNLP system to analyze incoming messages and generate fluent responses.
+                It is designed to carry on a conversation in the domain of appointment scheduling.
+              </p>
+
+              <p>
+                The source code is public on github, so go ahead and check out the source code for the
+                <a href="https://github.com/es3649/ExecSec">app</a> or the 
+                <a href="https://github.com/es3649/NLPServer">server</a>.
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <h4><code>scripturetool</code></h4>
+              <!-- <img src=""
+                alt="scripturetool preview"/> -->
+              <p>
+                A command line tool for the scriptures. 
+                Just type in a reference and in less than a second you'll be reading the word of God in <code>less</code>!
+                <code>scripturetool</code> is implemented in Go and makes use of multithreading.
+                It doesn't really need it, but multithreading is built in in Go, so I figured I'd give it a shot.
+              </p>
+
+              <p>
+                The souce code is <a href="https://github.com/es3649/scripturetool">availible on github</a>.
+                As is, it still promises a few features which I haven't implemented, but it still works fantastically well.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4><code>proj</code></h4>
+              <!-- <img class="project-image"
+                src=""
+                alt="proj tool preview"/> -->
+              <p>
+                A command line application to give me the powerful IDE tools that the shell doesn't have. It's still a work in progress.
+                <code>proj</code> is still mostly conceptual at this point, but I hope to make some time this summer to bring it to life.
+                Feel free to check the project out on <a href="https://github.com/es3649/proj">github</a> to make suggestions or even help out if you want.
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <h4><code>studmane.com</code> source code</h4>
+              <!-- <img class="project-image"
+                src=""
+                alt="studmane.com source image"/> -->
+                <p>The source code for studmane.com.
+                  You're already looking at the final (so far) product, but you can get the 
+                  <a href="https://github.com/es3649/studmane-web">behind the scenes view</a>
+                  if you want to check out my web-dev skills.
+                </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4>Poetry</h4>
+              <!-- <img class="project-image"
+                src=""
+                alt="poetry preview"/> -->
+              <p>
+                
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <h4>Studmane Blag</h4>
+              <!-- <img class="project-image"
+                src="/res/blag_logo.png"
+                alt="studmane blag perview"/> -->
+              <p>
+                <a href="https://github.com/es3649/studmane-web">Source code</a> and 
+                <a href="/blag">content</a>: a little bit of opinionated writing, and a whole lot of vuejs.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="container tab-pane fade" id="nav-experience" role="tabpanel" aria-labelledby="nav-experience-tab">
+        
+          <div class="row heading">
+            <h2>
+              Work Experience
+            </h2>
+          </div>
+        
+          <div class="row list">
+            <ul>
+              <li><p class="floatleft"><b>Software Developer</b>&nbsp;<i class="light">Aug 2019 - present</i></p><p class="floatright"><i>LZTek</i></p></li>
+              <div style="clear: both;">
+                Constructed large scale apps and graphical reports within the Quickbase database service to provide real time logistical data for internal use and client convenience
+              </div>  
+                
+              <li><p class="floatleft"><b>Research Intern</b>&nbsp;<i class="light">Jan - Aug 2018</i></p><p class="floatright"><i>Cobalt Speech and Language</i></p></li>
+              <div style="clear: both;">
+                Cleaned transcribed audio data with Python scripts to prepare it for use in Acoustic model training<br>
+                Implemented an object relational mapping to store company data for easier storage and management                      
+              </div>
+                  
+              <li><p class="floatleft"><b>Teaching Assistant</b>&nbsp;<i class="light">Jan 2019 - June 2019</i></p><p class="floatright"><i>Brigham Young University</i></p></li>
+              <div style="clear: both;">
+                Instructed students in principles of discrete mathematics to help them understand mathematical design concepts for their projects<br>
+                Graded assignments and exams to help remove the load of grading from the professor so he could focus on teaching and research<br>
+                Designed and debugged C++ projects to help students finish projects on time
+              </div>
+                    
+              <li><p class="floatleft"><b>Research Assistant</b>&nbsp;<i class="light">Sept 2018 - Sept 2019</i></p><p class="floatright"><i>Brigham Young University</i></p></li>
+              <div style="clear: both;">
+                Researched stock market cycles in an attempt to predict stock growth and decline for NCH Capital - Project supervised by Dr. Michael Dorff<br>
+                Loaded a MySQL database with stock market data to manage data better for research<br>
+                Designed a user interface in Unity for human robot interaction and intent expression for pathfinding - Project supervised by Dr. Michael Goodrich<br>
+                Created an algorithm to choose the optimal path given a list of path weight vectors and an intent vector
+              </div>
+              
+              <li><p class="floatleft"><b>Proselytizing Missionary</b>&nbsp;<i class="light">Sept 2015 - Aug 2017</i></p><p class="floatright"><i>Church of Jesus Christ of Latter-day Saints</i></p></li>
+              <div style="clear: both;">
+                Served two years in Central Washington to preach the restored gospel of Jesus Christ<br>
+                Helped friends and proselytes make and keep commitments to come closer to Christ and learn of him<br>
+                Trained and supervised other missionaries in bi-weekly meetings to help them work more effectively<br>
+                Studied Spanish to focus preaching to the Hispanic population
+              </div>
+                        
+            </ul>
+          </div>
+                  
+          <div class="heading row" >
+            <h2>
+              Coursework
+            </h2>
+          </div>
+        
+          <p class="floatleft"><b>Mathematics (BS) Computational emphasis</b>&nbsp;<i class="light">Graduation (estimated) Apr 2020 - 3.99 GPA</i></p><p class="floatright"><i>Brigham Young University</i></p>
+          <p class="nomargin-bottom" style="clear: both;">Courses in:</p>
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <li>Data Structures</li>
+              <li>Algorithm design and analysis</li>
+              <li>Discrete mathematics</li>
+            </div>
+            <div class="col-12 col-md-4">
+              <li>Graph theory</li>
+              <li>Linear and abstract algebra</li>
+              <li>Logic and mathematical analysis</li>
+            </div>
+            <div class="col-12 col-md-4">
+              <li>Natural Language Processing</li>
+              <li>Server-client structure</li>
+              <li>Web programming and REST APIs</li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p class="center-text">
+        Check me out on:
+        <a href="https://github.com/es3649">
+          Github
+          <img class="logo"
+          src="./res/GitHub-Mark-Light.png"
+          alt="Github Logo" 
+          title="http://github.com/es3649" />
+        </a>
+        <a href="https://www.linkedin.com/in/eric-s-5b923395/">
+          LinkedIn
+          <img class="logo"
+          src="./res/In-White.png"
+          alt="LinkedIn Logo" 
+          title="http://www.linkedin.com/in/eric-s-5b923395/"/>
+        </a>
+      </p>
+      <p class="center-text"><a href="sitemap.html">Site Map</a></p>
+      <p class="center-text">
+        Created by Eric Steadman on July 8, 2019; updated October 23, 2019
+        <br>Contact me: <a href="mailto:studmane@lztek.io">studmane@lztek.io</a>
+      </p>
+    </div>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="./script.js"></script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
 
 </html>

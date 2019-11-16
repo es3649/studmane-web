@@ -4,12 +4,31 @@ body {
     margin: 0dp;
 }
 
-#index {
+#index, .root {
     background-image: url('res/P1010572.JPG');
     background-position-x: center;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 10rem;
 }
+
+/* footer properties */
+
+footer, .footer {
+    padding-top: .125in;
+    padding-bottom: .125in;
+    color: #F0F0F8;
+    background-color: #444458;
+    
+    height: 10rem;
+    /* padding: 1rem; */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}    
 
 #tranquility {
     background-image: url('res/drew.JPG');
@@ -33,10 +52,12 @@ div.imgbox {
 
 div.heading {
     align-self: center;
+    margin-top: 15px;
 }
 
 div.paragraph {
     margin: .25in;
+    font-size: 13pt;
 }
 
 div.code-block {
@@ -55,6 +76,33 @@ div.code-block {
     text-align: center;
 }
 
+p.floatright {
+    padding-right: 20px;
+    text-align: right;
+    float: right;
+}
+
+p.floatleft {
+    text-align: left;
+    float: left;
+}
+
+p.nomargin-bottom, p.floatleft, p.floatright {
+    margin-bottom: 0px;
+}
+
+p.nomargin {
+    margin: 0px;
+}
+
+.light {
+    color: #666676;
+}
+
+.uline {
+    text-decoration-line: underline;
+}
+
 .indent {
     margin-left: .25in;
 }
@@ -63,10 +111,10 @@ div.code-block {
     max-height: 1em;
 }
 
-button.mischief {
-    padding: .125in;
-    background-color: #444458;
-    color: #F0F0F8
+.project-image {
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* I don't like the purple links*/
@@ -74,13 +122,13 @@ a {
     color: inherit;
 }
 
-h1, h2, h3, h4, h5, p, li, ul {
+h1, h2, h3, h4, h5, p, li, ul, nav {
     font-family: 'Signika';
 }
 
 /* code should look like code, right? */
 code {
-    color: #D36025
+    color: rgb(0, 0, 0)
 }
 
 code.block {
@@ -95,22 +143,30 @@ h1 code {
     color: #F0F0F8;
 }
 
-/* footer properties */
+.pt48 {
+    font-size: 48pt;
+}
 
-footer {
-    padding-top: .125in;
-    padding-bottom: .125in;
-    color: #F0F0F8;
-    background-color: #444458;
-    
+.pt72 {
+    font-size: 72pt;
 }
 
 /* IDs */
-#machu-poncho {
-    max-width: 1.5in;
-    margin: 20px;
+#santiago-me {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#mischiefBox {
-    display: none;
+#machu-poncho-home {
+    max-width: 94%;
+    margin: 3%;
+}
+
+#welcome {
+    margin: 4%;
+}
+
+#welcome h1 {
+    font-size: 72pt;
 }

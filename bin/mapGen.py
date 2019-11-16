@@ -1,12 +1,15 @@
 #!/usr/local/bin/python3
 
+# TODO add generation for blog theme and favorite pages.
+# Consider adding meta tags for topics and/or favorites
+
 from glob import glob
 from os import path as P
 import os
 
 FILESDIR = '/home/es3649/workspace/studmane-web/public'
 
-IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules', 'blag/dist']
+IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules', 'blag/dist', 'files/gitignore']
 
 # these variables define the css classes which correspond to these types of files
 FOLDER_CLASS = "dir"
