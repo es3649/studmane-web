@@ -153,25 +153,47 @@
             </div>
           </div>
           <!-- TODO expand on these, give them each some space -->
+          <!-- each title will be in a col-6, then each picture in a col-3 and description in a col-3
+          then, at lg or md breakpoint, the pics and description collapse, then at md, the columns collapse -->
           
           <div class="row">
             <div class="col-12 col-md-6">
               <h4>ExecSec</h4>
-              <img class="project-image"
+              <!-- <img class="project-image"
                 src="/res/ExecSecPreview.png"
-                alt="ExecSec app preview"/>
+                alt="ExecSec app preview"/> -->
               <p>
                 ExecSec is an Android client app with a Java NLP server.
+                It's still in progress, but should be done by mid-december.
+              </p>
+
+              <p>
+                ExecSec manages incoming text messages and generated responses. 
+                It uses Stanford's coreNLP system to analyze incoming messages and generate fluent responses.
+                It is designed to carry on a conversation in the domain of appointment scheduling.
+              </p>
+
+              <p>
+                The source code is public on github, so go ahead and check out the source code for the
+                <a href="https://github.com/es3649/ExecSec">app</a> or the 
+                <a href="https://github.com/es3649/NLPServer">server</a>.
               </p>
             </div>
 
             <div class="col-12 col-md-6">
               <h4><code>scripturetool</code></h4>
-              <img src=""
-                alt="scripturetool preview"/>
+              <!-- <img src=""
+                alt="scripturetool preview"/> -->
               <p>
                 A command line tool for the scriptures. 
-                Just type in a reference and in less than a second you'll be reading the word of God in <code>less</code>.
+                Just type in a reference and in less than a second you'll be reading the word of God in <code>less</code>!
+                <code>scripturetool</code> is implemented in Go and makes use of multithreading.
+                It doesn't really need it, but multithreading is built in in Go, so I figured I'd give it a shot.
+              </p>
+
+              <p>
+                The souce code is <a href="https://github.com/es3649/scripturetool">availible on github</a>.
+                As is, it still promises a few features which I haven't implemented, but it still works fantastically well.
               </p>
             </div>
           </div>
@@ -179,41 +201,48 @@
           <div class="row">
             <div class="col-12 col-md-6">
               <h4><code>proj</code></h4>
-              <img class="project-image"
+              <!-- <img class="project-image"
                 src=""
-                alt="proj tool preview"/>
+                alt="proj tool preview"/> -->
               <p>
                 A command line application to give me the powerful IDE tools that the shell doesn't have. It's still a work in progress.
+                <code>proj</code> is still mostly conceptual at this point, but I hope to make some time this summer to bring it to life.
+                Feel free to check the project out on <a href="https://github.com/es3649/proj">github</a> to make suggestions or even help out if you want.
               </p>
             </div>
 
             <div class="col-12 col-md-6">
-              <h4><code>studmane.com</code> Source</h4>
-              <img class="project-image"
+              <h4><code>studmane.com</code> source code</h4>
+              <!-- <img class="project-image"
                 src=""
-                alt="studmane.com source image"/>
-                <p>The source code for studmane.com.</p>
+                alt="studmane.com source image"/> -->
+                <p>The source code for studmane.com.
+                  You're already looking at the final (so far) product, but you can get the 
+                  <a href="https://github.com/es3649/studmane-web">behind the scenes view</a>
+                  if you want to check out my web-dev skills.
+                </p>
             </div>
           </div>
 
           <div class="row">
             <div class="col-12 col-md-6">
               <h4>Poetry</h4>
-              <img class="project-image"
+              <!-- <img class="project-image"
                 src=""
-                alt="poetry preview"/>
+                alt="poetry preview"/> -->
               <p>
-
+                
               </p>
             </div>
 
             <div class="col-12 col-md-6">
               <h4>Studmane Blag</h4>
-              <img class="project-image"
+              <!-- <img class="project-image"
                 src="/res/blag_logo.png"
-                alt="studmane blag perview"/>
+                alt="studmane blag perview"/> -->
               <p>
-                Source code and content: a little bit of opinionated writing, and a whole lot of vuejs.
+                <a href="https://github.com/es3649/studmane-web">Source code</a> and 
+                <a href="/blag">content</a>: a little bit of opinionated writing, and a whole lot of vuejs.
               </p>
             </div>
           </div>
@@ -323,10 +352,11 @@
     
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script> -->
     <!-- <script type="text/javascript" src="./script.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="/js/popper.min.js"></script> -->
-    <!-- <script src="/js/jquery.min.js"></script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   </body>
 
