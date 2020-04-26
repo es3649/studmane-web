@@ -56,7 +56,7 @@
           These commit histories can be split off in to different branches, then each branch can be modified independently.
           Branches can then be merged back together as desired to reflect changes made on both branches.
           All these commits and branches can be easily managed and shared with others using GitHub, GitLab, etc.
-          As one may suppose, this can result in conflict, when different changed have been made to the same line of code
+          As one may suppose, this can result in conflict, when different changes have been made to the same line of code
           on both branches, but these can be resolved quite easily with most IDEs.
         </p>
 
@@ -68,7 +68,7 @@
 
         <p>
           The following is a guide to using <code>git</code> from the command line, and at the end there is a step by step
-          guide in how to best use <code>git</code> in collaberation with others to avoid undesired changes, to minimize conflicts,
+          guide in how to best use <code>git</code> in collaboration with others to avoid undesired changes, to minimize conflicts,
           and to generally make everyone's life easer.
         </p>
       </div>
@@ -89,7 +89,7 @@
       <div class="section">
       
         <h1 id="commit">Commit</h1>
-        <p>To <i>commit</i> is pretty simple, it 'saves' your changes. Just run: <code>git commit -am [COMMIT_MESSAGE]</code></p>
+        <p>To <i>commit</i> is pretty simple, it &quot;saves&quot; your changes. Just run: <code>git commit -am [COMMIT_MESSAGE]</code></p>
         <p>The <code>[COMMIT MESSAGE]</code> should include a short but specific summary of the changes which are being saved.</p>
         <p>If needed, you can run <code>git commit --amend -am [COMMIT_MESSAGE]</code> to change or update the commit message of the last commit. Also, omitting the <code>m</code> in <code>-am</code> will cause git to open an editor in which you can give a longer explanation of the changes.</p>
         
@@ -114,33 +114,33 @@
           <p>Opens a commit history similar to the following:</p>
           <pre><code>
 01 commit 9e34fe47b705b1ae10f372343aba0dd70005730b (HEAD -&gt; es3649/NHC)
-02 Author: es3649 &lt;es3649@gmail.com&gt;
+02 Author: es3649 &lt;studmane@lztek.io&gt;
 03 Date:   Fri Feb 8 14:21:11 2019 -0700
 04 
 05     added documentation for train_test_split.py
 06 
 07 commit 334acbd0ed88de8eaf8faf067e8a4297425d603e (origin/es3649/NHC)
 08 Merge: 6b80fbd f0ea129
-09 Author: es3649 &lt;es3649@gmail.com&gt;
+09 Author: es3649 &lt;studmane@lztek.io&gt;
 10 Date:   Thu Jan 31 09:59:29 2019 -0700
 11 
 12     Merge branch &#39;master&#39; of https://github.com/es3649/NHC into es3649/NHC
 13
 14 commit 6b80fbd3df05646796448777004c615df99b57f9
-15 Author: es3649 &lt;es3649@gmail.com&gt;
+15 Author: es3649 &lt;studmane@lztek.io&gt;
 16 Date:   Tue Jan 29 18:07:16 2019 -0700
 17 
 18     added the time separated data
 19 
 20 commit f0ea129ee8fd3db7d251c3543211a8b7ff6d562e (origin/master, origin/HEAD, master)
 21 Merge: 4e6d7f5 524efbe
-22 Author: es3649 &lt;es3649@gmail.com&gt;
+22 Author: es3649 &lt;studmane@lztek.io&gt;
 23 Date:   Mon Jan 28 14:35:22 2019 -0700
 24
 25     Merge branch &#39;es3649/fix-the-tree-logs&#39;</code></pre>
           <p>So, these line numbers don't actually appear, I just put theme there for easier reference. This log you see may be longer or shorter. This one shows the last 4 commits.</p>
-          <p>On lines 1, 7, 14, 20 we have commit hashes. These big long strings are unique identifiers for commits.</p>
-          <p>On 1, 7, 20 at the end of the line (in parentheses) we have branch names. <code>origin/master</code> is currently behind the by current branch <code>es3649/NHC</code>. But the remote version of my <code>NHC</code> branch is behind the remote version, <code>origin/es3649/NHC</code>.</p>
+          <p>On lines 1, 7, 14, 20 we have commit hashes. These big long strings are unique identifiers for commits, and they provide a cryptic summary of the changes.</p>
+          <p>On 1, 7, 20 at the end of the line (in parentheses) we have branch names. <code>origin/master</code> is currently behind the current branch <code>es3649/NHC</code>, but this version of my <code>NHC</code> branch is ahead of the remote version, <code>origin/es3649/NHC</code>.</p>
           <p>On lines 5, 12, 18, 25 I have commit messages for the commits which have been made.</p>
         </div>
           
@@ -151,12 +151,12 @@
           <p><code>git rm [FILENAME]</code> tells git to delete the file at <code>[FILENAME]</code> and to stop tracking it. Wait, delete it, like from the computer? Yep! it will be GONE! to get it back (if you've already committed the file once) you can run <code>git checkout HEAD [FILENAME]</code> to bring him back. By default, git won't let you delete files which have been changed or added since the last commit. Add the <code>-f</code> flag to delete them anyway.</p>
           <p><code>git rm --cached [FILENAME]</code> is what you probably wanted. it WILL NOT delete the file at <code>[FILENAME]</code>, but will just stop tracking it.</p>
           <p><code>git mv [FILENAME] [DESTINATION]</code> tells git to move a the file at <code>[FILENAME]</code> to <code>[DESTINATION]</code>, but to keep tracking it at the new location</p>
-          <p><code>git diff</code> shows the changed which have been made since the last commit.</p>
+          <p><code>git diff</code> shows the changes which have been made since the last commit.</p>
 
           <div class="subsection">
             <h2 id="gitignore">.gitignore</h3>
-            <p>Now, maybe you have some files that you want around, but you don't want git to see them (files with secret access keys, compiled binaries, or giant data files), but you <em>also</em> don't want those obnoxious &quot;untracked file&quot; dialogs whenever you commit and check the status.</p>
-            <p>Git has a secret file called <code>.gitignore</code> which just sits at the root of your git repository and tells git what to ignore. Git will never complain about untracked files which are listed in your .gitignore. It will also not save or track changes in them.</p>
+            <p>Now, maybe you have some files that you want around, but you don't want <code>git</code> to see them (files with secret access keys, compiled binaries, or giant data files), but you <em>also</em> don't want those obnoxious &quot;untracked file&quot; dialogs whenever you commit and check the status.</p>
+            <p>Git has a secret file called <code>.gitignore</code> which just sits around wherever you put him and tells <code>git</code> what to ignore. <code>git</code> will never complain about untracked files which are listed in your .gitignore. It will also not save or track changes in them.</p>
           </div>
         </div>
       </div>
@@ -166,7 +166,7 @@
       <div class="section">
 
         <h1 id="accessing-remote">Accessing Remote</h1>
-        <p>One of the beauties of git is that it stores all your changes in the great, unknowable, and ever-persistent cloud. You will, however, need to access these branches and update them so that everyone can see what you've been working on.</p>
+        <p>One of the beauties of <code>git</code> is that it stores all your changes in the great, unknowable, and ever-persistent cloud. You will, however, need to access these branches and update them so that everyone can see what you've been working on.</p>
 
         <div class="subsection">
           <h2 id="push">Push</h2>

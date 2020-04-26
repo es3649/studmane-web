@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import CougarsLament from './views/CougarsLament.vue'
+// const CougarsLament = () => import('./views/CougarsLament.vue') 
 
 Vue.use(Router)
 
@@ -17,7 +19,18 @@ export default new Router({
       path: '/blag',
       name: 'home',
       component: Home
-    }//,
+    },
+    {
+      path: '/cougarslament',
+      name: "Cougar's Lament",
+      component: CougarsLament
+      // component: () => import('./views/CougarsLament.vue')
+    }
+    // {
+    //   path: '/blag/truth',
+    //   name: 'truth',
+    //   // component: () => import('./views/Truth.vue')
+    // },
     // {
     //   path: '/movie',
     //   name: 'movie',

@@ -6,9 +6,9 @@ compile:
 
 	# move it to the place we want
 	rm -rf public/blag/*
-	cp -r blag/{dist,res} public/blag/
-	cp blag/index.html public/blag/
-	cp blag/res/page_images/* public/res/page_images/
+	# cp -r blag/{dist,res} public/blag/
+	# cp blag/index.html public/blag/
+	# cp blag/res/page_images/* public/res/page_images/
 
 map:
 	./bin/mapGen.py > public/sitemap.html

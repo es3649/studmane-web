@@ -42,6 +42,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item disabled" href="#">Nothing here yet!</a>
               <!--options-->
+              <router-link class="nav-link" to="/cougarslament">Cougars Lament</router-link>
             </div>
           </li>
         </ul>
