@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "ecstatic": "^4.1.2",
+    "ecstatic": "^4.1.4",
     "jquery": "^3.4.1",
     "js-yaml": "^3.13.1",
     "popper.js": "^1.15.0",
