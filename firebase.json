@@ -5,20 +5,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "/blag/**",
-        "destination" : "/blag/index.html"
-      },
-      {
-        "source": "/[!blag]*",
-        "destination": "/404.html"
-      },
-      {
-        "source": "/[!blag]*/**",
-        "destination": "/404.html"
-      }
     ]
   }
 }

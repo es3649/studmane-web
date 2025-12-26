@@ -13,7 +13,7 @@ compile:
 map:
 	./bin/mapGen.py > public/sitemap.html
 
-deploy: compile map
+deploy: map
 
 	# npm build
 	firebase deploy

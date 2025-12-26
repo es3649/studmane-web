@@ -7,7 +7,7 @@ from glob import glob
 from os import path as P
 import os
 
-FILESDIR = '/home/es3649/workspace/studmane-web/public'
+FILESDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../public'))
 
 IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules', 'blag/dist', 'files/gitignore']
 
