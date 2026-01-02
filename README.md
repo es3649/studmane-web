@@ -1,7 +1,12 @@
 # studmane-web
-Version control for content at studmane.com
+Version control for my personal website at [studmane.com](studmane.com)
 
-It deploys to the studmane-web project in Firebase.
+It deploys to my studmane-web project in Firebase.
 
-Fun idea, write a bash script to generate the site map when we deploy.
-Start using a makefile.
+## TODO
+
+- /blag needs to be converted to Vue3 or deleted
+- /dev/essays need to be converted to HTML
+  - Might write a simple MD -> HTML converter to do this
+- Background images need imagesets
+- Consider converting the whole site to Vue3 instead of vanilla
