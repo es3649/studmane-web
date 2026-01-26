@@ -1,7 +1,7 @@
 # Article of Faith 1 &ndash; The Godhead
 
 > We believe in God, the Eternal Father, and in His Son, Jesus Christ, and in the Holy Ghost. <br/>
-> \- Articles of Faith 1:1
+> \- [Articles of Faith 1:1]()
 
 A correct understanding of the Godhead is essential to salvation.
 Indeed, as Jesus prayed during his Intercessory prayer, "_this is life eternal, that they might know thee, the only true God, and Jesus Christ, whom thou hast sent_" [[John 17:3]()].
@@ -116,7 +116,8 @@ Elder Bruce R. McConkie taught the following about hearing the voice of God.
 
 > First, be it remembered that most scriptures that speak of God or of the Lord do not even bother to distinguish the Father from the Son, simply because it doesn’t make any difference which God is involved. They are one. The words or deeds of either of them would be the words and deeds of the other in the same circumstance.
 > 
-> Further, if a revelation comes from, or by the power of the Holy Ghost, ordinarily the words will be those of the Son, though what the Son says will be what the Father would say, and the words may thus be considered as the Father’s. Thus any feelings of love, praise, awe, or worship that may fill our hearts when we receive the divine words will be the same no matter who is thought or known to be the author of them. [[Our Relationship with the Lord; Mar 2, 1982; speeches.byu.edu](https://speeches.byu.edu/talks/bruce-r-mcconkie/relationship-lord/)]
+> Further, if a revelation comes from, or by the power of the Holy Ghost, ordinarily the words will be those of the Son, though what the Son says will be what the Father would say, and the words may thus be considered as the Father’s. Thus any feelings of love, praise, awe, or worship that may fill our hearts when we receive the divine words will be the same no matter who is thought or known to be the author of them. <br/>
+> \- [Our Relationship with the Lord; Mar 2, 1982; speeches.byu.edu](https://speeches.byu.edu/talks/bruce-r-mcconkie/relationship-lord/)
 
 ## Unities of the Godhead
 
