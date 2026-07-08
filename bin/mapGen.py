@@ -9,7 +9,7 @@ import os
 
 FILESDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../public'))
 
-IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules', 'blag/dist', 'files/gitignore']
+IGNORE = ['.css', '.js', '.ico', '.JPG', '.jpg', '.PNG', '.png', '.map', '.min', 'node_modules', 'files/gitignore', '.woff', '.woff2']
 
 # these variables define the css classes which correspond to these types of files
 FOLDER_CLASS = "dir"
