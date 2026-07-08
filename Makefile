@@ -1,14 +1,16 @@
 SHELL := /bin/bash
 
 compile:
-	# pushd to the blag and compile it
-	cd blag && npm run build
+	# pushd to the cookbook and compile it
+	cd vue-src/totk-cookbook && npm run build
 
 	# move it to the place we want
-	rm -rf public/blag/*
-	# cp -r blag/{dist,res} public/blag/
-	# cp blag/index.html public/blag/
-	# cp blag/res/page_images/* public/res/page_images/
+	rm -rf public/totk-cookbook/*
+	mkdir -p public/totk-cookbook
+	cp -r vue-src/totk-cookbook/dist/* public/totk-cookbook/
+
+run:
+	firebase emulators:start
 
 map:
 	./bin/mapGen.py > public/sitemap.html

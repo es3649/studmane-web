@@ -1,0 +1,23 @@
+/* .header {
+  width: 100%;
+  position: sticky;
+  background-color: var(--gold);
+  color: var(--primary);
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--primary);
+} */
+
+span.multiselect__tag {
+  background: var(--primary);
+}
+
+i.multiselect__tag-icon::after {
+  color: var(--bg-alt);
+}
+
+multiselect.multiselect {
+  background: var(--bg);
+}
