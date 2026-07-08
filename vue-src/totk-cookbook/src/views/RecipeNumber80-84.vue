@@ -79,4 +79,6 @@
   <h3 id="salmon">82: Salmon Risotto</h3>
   <h3 id="crab">83: Crab Risotto</h3>
   <h3 id="cheesy">84: Cheesy Risotto</h3>
+  <h3>Credits</h3>
+  <p>The risotto method was taught to me by my buddy, Isaac</p>
 </template>
