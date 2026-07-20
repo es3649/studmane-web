@@ -113,7 +113,7 @@ const desserts = computed(() =>
       &nbsp;
       <input id="group" type="checkbox" v-model="group" />
       <br />
-      Search Ingredients:
+      Search In-Game Ingredients:
       <br />
       <!-- <select v-model="selected_ingredients" placeholder="Ingredients" multiple>
         <option v-for="item of ALL_INGREDIENTS" :key="item">{{ item }}</option>
@@ -183,7 +183,7 @@ const desserts = computed(() =>
   <p><a href="https://artsyomni.com/hyliaserif">Hylia Serif</a> font by Artsy Omni</p>
   <p>
     <i>
-      Disclaimer: This project is not affiliated with not endorsed by Nintendo. The Legend of Zelda
+      Disclaimer: This project is not affiliated with nor endorsed by Nintendo. The Legend of Zelda
       is a registered trademark of Nintendo of America Inc.
     </i>
   </p>

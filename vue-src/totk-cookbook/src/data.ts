@@ -29,9 +29,9 @@ import {
   SUGAR,
   APPLE,
   BERRY,
-  COCONUT,
-  MELON,
-  DRAGONFRUIT,
+  PALM_FRUIT,
+  HYDROMELON,
+  VOLTFRUIT,
 } from './ingredients'
 import { DESSERT, ENTREE, SIDE, SOUP, type MealCategory } from './meal_category'
 
@@ -433,7 +433,7 @@ export const MEALS: Meal[] = [
     numbers: '46',
     name: 'Fruit and Mushroom Mix',
     id: 46,
-    ingredients: [FRUIT, MELON, COCONUT, DRAGONFRUIT, APPLE, BANANA, MUSHROOMS],
+    ingredients: [FRUIT, HYDROMELON, PALM_FRUIT, VOLTFRUIT, APPLE, BANANA, MUSHROOMS],
     category: SIDE,
   },
   {
@@ -517,14 +517,14 @@ export const MEALS: Meal[] = [
     numbers: '9',
     name: 'Steamed Fruit',
     id: 9,
-    ingredients: [HYRULE_HERB, STAMBULB, FRUIT, MELON, COCONUT, DRAGONFRUIT, APPLE, BANANA],
+    ingredients: [HYRULE_HERB, STAMBULB, FRUIT, HYDROMELON, PALM_FRUIT, VOLTFRUIT, APPLE, BANANA],
     category: DESSERT,
   },
   {
     numbers: '47',
     name: 'Simmered Fruit',
     id: 47,
-    ingredients: [FRUIT, MELON, COCONUT, DRAGONFRUIT, APPLE, BANANA],
+    ingredients: [FRUIT, HYDROMELON, PALM_FRUIT, VOLTFRUIT, APPLE, BANANA],
     category: DESSERT,
   },
   {
@@ -545,7 +545,7 @@ export const MEALS: Meal[] = [
     numbers: '117',
     name: 'Honeyed Fruits',
     id: 117,
-    ingredients: [HONEY, FRUIT, MELON, COCONUT, DRAGONFRUIT, BANANA],
+    ingredients: [HONEY, FRUIT, HYDROMELON, PALM_FRUIT, VOLTFRUIT, BANANA],
     category: DESSERT,
   },
   {
@@ -587,7 +587,7 @@ export const MEALS: Meal[] = [
     numbers: '126',
     name: 'Fruit Cake',
     id: 126,
-    ingredients: [FRUIT, MELON, COCONUT, DRAGONFRUIT, APPLE, BANANA, WHEAT, SUGAR],
+    ingredients: [FRUIT, HYDROMELON, PALM_FRUIT, VOLTFRUIT, APPLE, BANANA, WHEAT, SUGAR],
     category: DESSERT,
   },
   {
@@ -615,7 +615,7 @@ export const MEALS: Meal[] = [
     numbers: '130',
     name: 'Fruit Pie',
     id: 130,
-    ingredients: [FRUIT, MELON, COCONUT, DRAGONFRUIT, BANANA, WHEAT, BUTTER, SUGAR],
+    ingredients: [FRUIT, HYDROMELON, PALM_FRUIT, VOLTFRUIT, BANANA, WHEAT, BUTTER, SUGAR],
     category: DESSERT,
   },
   {
@@ -636,7 +636,7 @@ export const MEALS: Meal[] = [
     numbers: '133',
     name: 'Noble Pursuit',
     id: 133,
-    ingredients: [COCONUT, MELON, DRAGONFRUIT, SALT],
+    ingredients: [PALM_FRUIT, HYDROMELON, VOLTFRUIT, SALT],
     category: DESSERT,
   },
 ]

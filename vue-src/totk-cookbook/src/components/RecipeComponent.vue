@@ -4,7 +4,6 @@ defineProps<{
   makes?: string
   img?: string
   game_ingredients: string[]
-  ingredients: string[]
 }>()
 </script>
 
@@ -24,9 +23,7 @@ defineProps<{
   </div>
 
   <h2>Ingredients</h2>
-  <ul>
-    <li v-for="idx in ingredients.length" :key="idx">{{ ingredients[idx - 1] }}</li>
-  </ul>
+  <slot name="ingredients"></slot>
 
   <h2>Directions</h2>
   <slot></slot>

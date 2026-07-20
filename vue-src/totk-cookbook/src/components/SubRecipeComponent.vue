@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps<{
+  id?: string
   name: string
   img?: string
   game_ingredients: string[]
@@ -8,13 +9,16 @@ defineProps<{
 </script>
 
 <template>
-  <h2>{{ name }}</h2>
+  <h2 :id="id">{{ name }}</h2>
   <h4>In-game Ingredients</h4>
   <ul>
     <li v-for="idx in game_ingredients.length" :key="idx">{{ game_ingredients[idx - 1] }}</li>
   </ul>
 
-  <slot v-if="$slots.notes" name="notes"></slot>
+  <div v-if="$slots.notes">
+    <h3>Notes</h3>
+    <slot name="notes"></slot>
+  </div>
 
   <div v-if="img != undefined">
     <img :src="img" alt="Image of {{ name }}" />

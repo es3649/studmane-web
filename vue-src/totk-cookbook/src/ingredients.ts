@@ -28,9 +28,9 @@ export const PEPPERS = 'Hot Peppers'
 export const TOMATOES = 'Tomatoes'
 export const GORON_SPICE = 'Goron Spice'
 export const SALT = 'Salt'
-export const MELON = 'Melon'
-export const COCONUT = 'Coconut'
-export const DRAGONFRUIT = 'Dragonfruit'
+export const HYDROMELON = 'Hydromelon'
+export const PALM_FRUIT = 'Palm Fruit'
+export const VOLTFRUIT = 'Voltfruit'
 
 export type Ingredient =
   | typeof MEAT
@@ -63,9 +63,9 @@ export type Ingredient =
   | typeof TOMATOES
   | typeof GORON_SPICE
   | typeof SALT
-  | typeof MELON
-  | typeof DRAGONFRUIT
-  | typeof COCONUT
+  | typeof HYDROMELON
+  | typeof VOLTFRUIT
+  | typeof PALM_FRUIT
 
 export const ALL_INGREDIENTS: Ingredient[] = [
   MEAT,
@@ -98,7 +98,7 @@ export const ALL_INGREDIENTS: Ingredient[] = [
   TOMATOES,
   GORON_SPICE,
   SALT,
-  MELON,
-  DRAGONFRUIT,
-  COCONUT,
+  HYDROMELON,
+  VOLTFRUIT,
+  PALM_FRUIT,
 ]
