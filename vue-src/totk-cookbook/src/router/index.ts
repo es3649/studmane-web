@@ -30,6 +30,15 @@ routes.push({
 const router = createRouter({
   history: createWebHistory('/totk-cookbook'),
   routes: routes,
+  scrollBehavior(to, from, savedPosition) {
+    // Retain scroll position when using browser back/forward buttons
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    // Always scroll to top
+    return { top: 0 }
+  },
 })
 
 export default router

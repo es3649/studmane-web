@@ -8,7 +8,7 @@ import SubRecipeComponent from '@/components/SubRecipeComponent.vue'
   <p>
     The in-game crêpes vary only in their toppings, so we provide first the recipe for the plain
     crêpe, then additional notes and directions for the toppings. Crepes can be rolled like taquitos
-    to simple eating, or folded in half then again in half or thirds for a fancier look.
+    for simple eating, or folded in half then again in half or thirds for a fancier look.
   </p>
 
   <p>
