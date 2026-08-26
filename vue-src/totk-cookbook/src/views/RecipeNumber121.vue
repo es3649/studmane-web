@@ -15,7 +15,7 @@ import RecipeComponent from '@/components/RecipeComponent.vue'
         <li>1 2/3 c Whole Milk</li>
         <li>1 1/3 c Heavy Cream</li>
         <li>3 Large eggs + 2 egg yolks</li>
-        <li>1c + 2/3 c Sugar</li>
+        <li>1 c + 2/3 c Sugar</li>
         <li>1 1/2 tsp Vanilla Extract</li>
         <li>Pinch of Salt</li>
       </ul>
@@ -56,7 +56,7 @@ import RecipeComponent from '@/components/RecipeComponent.vue'
           <li>Strain mixture through a fine-mesh strainer</li>
         </ol>
       </li>
-      <li>Adjust over rack to middle position, and preheat oven to 350 degrees</li>
+      <li>Adjust oven rack to middle position, and preheat oven to 350 degrees</li>
       <li>
         Bring a kettle of water to a boil. Place a dish towel in the bottom of a large roasting pan,
         and gently pour the boiling water over the towel.
@@ -71,7 +71,7 @@ import RecipeComponent from '@/components/RecipeComponent.vue'
       </li>
       <li>Transfer ramekins to a wire rick to cool before serving.</li>
       <li>
-        To serve, slide a paring knife around the rim of hte ramekin to unstick the custard from the
+        To serve, slide a paring knife around the rim of the ramekin to unstick the custard from the
         vessel. Place a small plate over the top of the ramekin, then invert. Carefully remove the
         ramekin so that the inverted pudding is left on the plate, gently shaking ramekin as needed
         to dislodge the pudding.
