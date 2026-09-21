@@ -182,6 +182,9 @@ const desserts = computed(() =>
   <h4>Credits</h4>
   <p><a href="https://artsyomni.com/hyliaserif">Hylia Serif</a> font by Artsy Omni</p>
   <p>
+    Special thanks to @urgash (Ben) for his culinary input on many of these recipes.
+    Also to the missionaries of the Church of Jesus Christ of Latter-day Saints, who were often my guinea pigs.</p>
+  <p>
     <i>
       Disclaimer: This project is not affiliated with nor endorsed by Nintendo. The Legend of Zelda
       is a registered trademark of Nintendo of America Inc.

@@ -10,7 +10,7 @@ import RecipeComponent from '@/components/RecipeComponent.vue'
   >
     <ol>
       <li>
-        Place carrots (except baby carrots), onion, leek, and garlic in a pot and cover with water.
+        Place carrots (except baby carrots), onion, and leek in a pot and cover with water.
         Boil until soft, about 20 min
       </li>
       <li>
@@ -18,11 +18,11 @@ import RecipeComponent from '@/components/RecipeComponent.vue'
         degrees, until fat has rendered, about 15 minutes
       </li>
       <li>
-        Drain water from vegetables, and puree in a blender with chicken broth as needed to ensure
+        Drain water from vegetables, and puree with garlic in a blender with chicken broth and milk as needed to ensure
         smooth blending
       </li>
 
-      <li>Add remaining chicken broth and rendered pork fat to the puree, and return to the pot</li>
+      <li>Add remaining chicken broth, milk, and rendered pork fat to the puree, and return to the pot</li>
 
       <li>
         Sauté mushrooms, and add them with the chopped baby carrots to the pot. Add spices and salt
@@ -32,9 +32,6 @@ import RecipeComponent from '@/components/RecipeComponent.vue'
 
       <li>Garnish with cream and parsley</li>
     </ol>
-    <template #notes>
-      <p>Suggestions: Use more cream in place of the broth, soften baby carrots before adding</p>
-    </template>
     <template #ingredients>
       <ul>
         <li>2lb (1kg) Carrots, peeled and cut into roughly uniform pieces</li>
@@ -44,8 +41,8 @@ import RecipeComponent from '@/components/RecipeComponent.vue'
         <li>3-5 Cloves of garlic</li>
         <li>3/4 lb Baby Carrots, chopped into 1/2in pieces</li>
         <li>6-8oz (5-6) white or crimini mushrooms, sliced</li>
-        <li>2T Butter</li>
-        <li>4c Chicken Broth</li>
+        <li>2c Whole Milk</li>
+        <li>2c Chicken Broth</li>
         <li>1/2t White Pepper</li>
         <li>1/4t Nutmeg</li>
         <li>Salt to taste</li>
